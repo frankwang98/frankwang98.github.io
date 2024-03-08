@@ -12,7 +12,7 @@ gitment_client_id:
 gitment_client_secret:
 
 # gitalk
-gitalk: true
+gitalk: false
 gitalk_owner: 'frankwang98'
 gitalk_admin: ['frankwang98']
 gitalk_repo: 'https://github.com/frankwang98/frankwang98.github.io'

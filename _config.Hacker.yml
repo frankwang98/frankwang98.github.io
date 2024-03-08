@@ -12,12 +12,12 @@ gitment_client_id:
 gitment_client_secret:
 
 # gitalk
-gitalk: false
-gitalk_owner:
-gitalk_admin: []
-gitalk_repo:
-gitalk_client_id:
-gitalk_client_secret:
+gitalk: true
+gitalk_owner: 'frankwang98'
+gitalk_admin: ['frankwang98']
+gitalk_repo: 'https://github.com/frankwang98/frankwang98.github.io'
+gitalk_client_id: 'a5fe48e1f74fca425de5'
+gitalk_client_secret: '492da8c4b3b4c2b670ca6689e08f293eb311a609'
 
 # valine comment
 valine: false

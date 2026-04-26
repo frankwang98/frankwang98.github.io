@@ -5,7 +5,10 @@ description: DevFrank's homepage - developer, open source enthusiast, sharing te
 
 🔧 Developer & 💻 Open source enthusiast
 
-分享有用的科技&生活知识～ 学习笔记｜日常记录｜实用软件
+<span style="display:flex;align-items:center;gap:1rem">
+  <span>分享有用的科技&生活知识～ 学习笔记｜日常记录｜实用软件</span>
+  <img src="https://avatars.githubusercontent.com/frankwang98?v=4" width="48" height="48" style="border-radius:50%">
+</span>
 
 ---
 
@@ -55,35 +58,6 @@ description: DevFrank's homepage - developer, open source enthusiast, sharing te
   <img src="assets/wechat.png" alt="wechat">
   <img src="assets/alipay.png" alt="alipay">
 </div>
-
----
-
-## GitHub
-
-<div id="github-profile" class="profile-card">
-  <img id="gh-avatar" width="80" height="80" style="border-radius:50%">
-  <div style="margin-left:1rem">
-    <h3 id="gh-name" style="margin:0;font-size:1.1rem"></h3>
-    <p id="gh-bio" style="color:var(--text-dim);font-size:0.85rem;margin:0.25rem 0"></p>
-    <p id="gh-stats" style="font-size:0.8rem;color:var(--text-dim)"></p>
-  </div>
-</div>
-
-<script>
-fetch('https://api.github.com/users/frankwang98')
-  .then(function(r){ return r.json() })
-  .then(function(d){
-    document.getElementById('gh-avatar').src = d.avatar_url;
-    document.getElementById('gh-name').textContent = d.name || d.login;
-    document.getElementById('gh-bio').textContent = d.bio || '';
-    document.getElementById('gh-stats').innerHTML = '📦 ' + d.public_repos + '  👥 ' + d.followers + '  ✨ ' + d.following;
-  })
-  .catch(function(e){ console.log(e) });
-</script>
-
-<style>
-.profile-card{display:flex;align-items:center;background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:1rem;margin:0.5rem 0}
-</style>
 
 ---
 

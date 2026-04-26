@@ -1,5 +1,6 @@
 ---
 title: Frank's Home Page
+description: DevFrank's homepage - developer, open source enthusiast, sharing tech knowledge
 ---
 
 🔧 Developer & 💻 Open source enthusiast
@@ -10,21 +11,41 @@ title: Frank's Home Page
 
 ## Links
 
-- [GitHub](https://github.com/frankwang98)
-- [CSDN](https://devfrank.blog.csdn.net/)
-- [Bilibili](https://space.bilibili.com/286686575)
-- 公众号: DevFrank
+[<img src="https://github.githubassets.com/favicon.ico" width="16" height="16"> GitHub](https://github.com/frankwang98)
+&nbsp;&nbsp;
+[<img src="https://img-blog.csdnimg.cn/favicon.ico" width="16" height="16"> CSDN](https://devfrank.blog.csdn.net/)
+&nbsp;&nbsp;
+[<img src="https://bilibili.com/favicon.ico" width="16" height="16"> Bilibili](https://space.bilibili.com/286686575)
+&nbsp;&nbsp;
+<span class="gzh-pop"><img src="https://mp.weixin.qq.com/favicon.ico" width="16" height="16">公众号<img src="assets/gzh.jpg" class="gzh-img"></span>
+&nbsp;&nbsp;
+[📧 Email](mailto:854714081@qq.com)
+
+<style>
+.gzh-pop { position: relative; cursor: pointer; display: inline-block; }
+.gzh-img {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 380px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+.gzh-pop:hover .gzh-img { display: block; }
+</style>
 
 ---
 
 ## Projects
 
-- 柠檬百宝盒 - 小程序
-- 柠檬大消除 - 小游戏
-- ip多功能工具箱 - `pip install ipdisp`
-- [home](http://frankwang98.github.io/home) - A beautiful homepage
-- [wiki](http://frankwang98.github.io/wiki) - A wiki page
-- [tools](https://tools-two-delta.vercel.app/) - Some useful tools
+- 柠檬百宝盒 - 微信小程序，日常实用工具集合
+- 柠檬大消除 - 休闲小游戏，水果消除玩法
+- [ip-CLI工具箱](https://pypi.org/project/ipdisp/) - pip包 `pip install ipdisp`
+- [home](http://frankwang98.github.io/home) - 个人主页模板
+- [wiki](http://frankwang98.github.io/wiki) - 知识笔记 wiki
+- [tools](https://tools-two-delta.vercel.app/) - 开发者在线工具集合
 
 ---
 
@@ -34,6 +55,35 @@ title: Frank's Home Page
   <img src="assets/wechat.png" alt="wechat">
   <img src="assets/alipay.png" alt="alipay">
 </div>
+
+---
+
+## GitHub
+
+<div id="github-profile" class="profile-card">
+  <img id="gh-avatar" width="80" height="80" style="border-radius:50%">
+  <div style="margin-left:1rem">
+    <h3 id="gh-name" style="margin:0;font-size:1.1rem"></h3>
+    <p id="gh-bio" style="color:var(--text-dim);font-size:0.85rem;margin:0.25rem 0"></p>
+    <p id="gh-stats" style="font-size:0.8rem;color:var(--text-dim)"></p>
+  </div>
+</div>
+
+<script>
+fetch('https://api.github.com/users/frankwang98')
+  .then(function(r){ return r.json() })
+  .then(function(d){
+    document.getElementById('gh-avatar').src = d.avatar_url;
+    document.getElementById('gh-name').textContent = d.name || d.login;
+    document.getElementById('gh-bio').textContent = d.bio || '';
+    document.getElementById('gh-stats').innerHTML = '📦 ' + d.public_repos + '  👥 ' + d.followers + '  ✨ ' + d.following;
+  })
+  .catch(function(e){ console.log(e) });
+</script>
+
+<style>
+.profile-card{display:flex;align-items:center;background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:1rem;margin:0.5rem 0}
+</style>
 
 ---
 

@@ -133,7 +133,8 @@ li::before { content: '•'; color: var(--accent); margin-right: 0.5rem; }
 #repos-container div { display: flex; gap: 0.75rem; font-size: 0.75rem; color: var(--text-dim); }
 
 kbd {
-  background: var(--bg);
+  background: var(--card-bg);
+  color: var(--text-dim);
   border: 1px solid var(--border);
   border-radius: 3px;
   padding: 0.1rem 0.4rem;

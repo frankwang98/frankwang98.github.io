@@ -1,14 +1,12 @@
 ---
 title: Frank's Home Page
 description: DevFrank's homepage - developer, open source enthusiast, sharing tech knowledge
+link: assets/frankwang98.png
 ---
 
 🔧 Developer & 💻 Open source enthusiast
 
-<span style="display:flex;align-items:center;gap:1rem">
-  <span>分享有用的科技&生活知识～ 学习笔记｜日常记录｜实用软件</span>
-  <img src="https://avatars.githubusercontent.com/frankwang98?v=4" width="48" height="48" style="border-radius:50%">
-</span>
+分享有用的科技&生活知识～ 学习笔记｜日常记录｜实用软件
 
 ---
 
@@ -16,7 +14,7 @@ description: DevFrank's homepage - developer, open source enthusiast, sharing te
 
 [<img src="https://github.githubassets.com/favicon.ico" width="16" height="16"> GitHub](https://github.com/frankwang98)
 &nbsp;&nbsp;
-[<img src="https://img-blog.csdnimg.cn/favicon.ico" width="16" height="16"> CSDN](https://devfrank.blog.csdn.net/)
+[<img src="assets/csdn.png" width="16" height="16"> CSDN](https://devfrank.blog.csdn.net/)
 &nbsp;&nbsp;
 [<img src="https://bilibili.com/favicon.ico" width="16" height="16"> Bilibili](https://space.bilibili.com/286686575)
 &nbsp;&nbsp;

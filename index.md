@@ -14,8 +14,8 @@
 ## Links
 
 - [GitHub](https://github.com/frankwang98)
-- [CSDN](#) <!-- TODO: add your CSDN link -->
-- [Bilibili](#) <!-- TODO: add your Bilibili link -->
+- [CSDN](https://devfrank.blog.csdn.net/)
+- [Bilibili](https://space.bilibili.com/286686575?spm_id_from=333.1007.0.0)
 
 ---
 
@@ -42,9 +42,84 @@
 
 ## All Repositories
 
+<details>
+<summary>Click to expand</summary>
+
 <div id="repos-container">
   <p>Loading...</p>
 </div>
+
+</details>
+
+<style>
+:root {
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --text-dim: #8b949e;
+  --accent: #58a6ff;
+  --link: #58a6ff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+h2 { font-size: 0.9rem; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin: 1.5rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+blockquote { font-size: 1.1rem; color: var(--text-dim); margin: 1rem 0; font-style: italic; }
+
+hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+ul { list-style: none; }
+li { margin: 0.4rem 0; font-size: 0.95rem; }
+li::before { content: '•'; color: var(--accent); margin-right: 0.5rem; }
+
+#repos-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
+
+#repos-container article {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+#repos-container a { font-weight: 600; font-size: 0.95rem; }
+#repos-container small { display: block; color: var(--text-dim); font-size: 0.8rem; margin: 0.25rem 0 0.5rem; line-height: 1.4; }
+#repos-container div { display: flex; gap: 0.75rem; font-size: 0.75rem; color: var(--text-dim); }
+
+kbd {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+details { margin-top: 0.5rem; }
+summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+summary:hover { color: var(--text); }
+</style>
 
 <script>
 (async function() {
@@ -60,6 +135,7 @@
         <div>
           ${repo.language ? `<kbd>${repo.language}</kbd>` : ''}
           <kbd>★ ${repo.stargazers_count}</kbd>
+          <kbd>⑂ ${repo.forks_count}</kbd>
         </div>
       </article>
     `).join('');

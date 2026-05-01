@@ -44,9 +44,8 @@ link: assets/frankwang98.png
 - 柠檬百宝盒 - 微信小程序，日常实用工具集合
 - 柠檬大消除 - 休闲小游戏，水果消除玩法
 - [ip-CLI工具箱](https://pypi.org/project/ipdisp/) - pip包 `pip install ipdisp`
+- [gitkpi-CLI工具箱](https://pypi.org/project/gitkpi/) - pip包 `pip install gitkpi`
 - [mysetuptool](https://pypi.org/project/mysetuptool/) - pip包 `pip install mysetuptool`
-- [home](http://frankwang98.github.io/home) - 个人主页模板
-- [wiki](http://frankwang98.github.io/wiki) - 知识笔记 wiki
 - [tools](https://tools-two-delta.vercel.app/) - 开发者在线工具集合
 
 ---

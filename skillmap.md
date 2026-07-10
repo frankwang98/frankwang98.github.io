@@ -1,107 +1,42 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="机器人 / 自动驾驶工程师能力雷达图，对比当前 vs P6 高级 vs P7 资深，自动识别关键缺口" />
-  <title>能力图谱 · 高级 / 资深 工程师对照</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">能力图谱 · 高级 / 资深 工程师对照</h1>
-</header>
-<h1 id="能力图谱-高级-资深-对照">🧭 能力图谱 · 高级 / 资深 对照</h1>
-<blockquote>
-<p>把你的能力摆到 <strong>P6 高级 / P7 资深</strong> 的雷达上 —
-一眼看出缺什么。</p>
-</blockquote>
-<h2 id="综合能力雷达">📡 综合能力雷达</h2>
+---
+title: 能力图谱 · 高级 / 资深 工程师对照
+description: 机器人 / 自动驾驶工程师能力雷达图，对比当前 vs P6 高级 vs P7 资深，自动识别关键缺口
+---
+
+# 🧭 能力图谱 · 高级 / 资深 对照
+
+> 把你的能力摆到 **P6 高级 / P7 资深** 的雷达上 — 一眼看出缺什么。
+
+## 📡 综合能力雷达
+
 <div class="legend">
-<p><span><i class="dot me"></i> 当前水平</span>
-<span><i class="dot p6"></i> P6 高级（团队 TL）</span>
-<span><i class="dot p7"></i> P7 资深（领域专家）</span></p>
+  <span><i class="dot me"></i> 当前水平</span>
+  <span><i class="dot p6"></i> P6 高级（团队 TL）</span>
+  <span><i class="dot p7"></i> P7 资深（领域专家）</span>
 </div>
-<div id="chart" class="chart-box">
 
-</div>
-<h2 id="关键缺口距-p7">🎯 关键缺口（距 P7）</h2>
-<div id="gaps" class="gaps">
+<div id="chart" class="chart-box"></div>
 
-</div>
-<h2 id="p6-p7-差异">📖 P6 → P7 差异</h2>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>维度</th>
-<th>P6 高级 (团队 TL)</th>
-<th>P7 资深 (领域专家)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>C++ 系统编程</strong></td>
-<td>大型代码库中独立完成复杂模块</td>
-<td>设计跨团队公共库、推动 C++ 规范</td>
-</tr>
-<tr>
-<td><strong>Python / 数据 / ML</strong></td>
-<td>训练 / 部署深度学习模型</td>
-<td>构建团队级数据闭环 / MLOps 平台</td>
-</tr>
-<tr>
-<td><strong>机器人 / 自动驾驶 领域</strong></td>
-<td>在感知 / 规划某方向独立交付</td>
-<td>主导多模块协同、理解上下游系统</td>
-</tr>
-<tr>
-<td><strong>系统整合能力</strong></td>
-<td>解决子系统性能瓶颈</td>
-<td>设计端到端 pipeline、把控接口与质量</td>
-</tr>
-<tr>
-<td><strong>数学 / 算法 / 前沿</strong></td>
-<td>应用 SOTA / 复现 paper</td>
-<td>改进算法 / 推动原创 / 落地重大方法论</td>
-</tr>
-<tr>
-<td><strong>工程化与架构</strong></td>
-<td>推动 CI/CD / 可观测性</td>
-<td>设计大型系统架构、定工程标准</td>
-</tr>
-<tr>
-<td><strong>影响力与产品思维</strong></td>
-<td>带 3-5 人小组、技术分享</td>
-<td>外部影响力：开源 / 大会 / 标准 / 行业判断</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><small>💡 自评：编辑页面底部 <code>SKILL_SCORES</code> 中的 0-5
-分，保存后刷新即可看到新雷达与缺口排序。</small></p>
+## 🎯 关键缺口（距 P7）
+
+<div id="gaps" class="gaps"></div>
+
+## 📖 P6 → P7 差异
+
+| 维度 | P6 高级 (团队 TL) | P7 资深 (领域专家) |
+|---|---|---|
+| **C++ 系统编程** | 大型代码库中独立完成复杂模块 | 设计跨团队公共库、推动 C++ 规范 |
+| **Python / 数据 / ML** | 训练 / 部署深度学习模型 | 构建团队级数据闭环 / MLOps 平台 |
+| **机器人 / 自动驾驶 领域** | 在感知 / 规划某方向独立交付 | 主导多模块协同、理解上下游系统 |
+| **系统整合能力** | 解决子系统性能瓶颈 | 设计端到端 pipeline、把控接口与质量 |
+| **数学 / 算法 / 前沿** | 应用 SOTA / 复现 paper | 改进算法 / 推动原创 / 落地重大方法论 |
+| **工程化与架构** | 推动 CI/CD / 可观测性 | 设计大型系统架构、定工程标准 |
+| **影响力与产品思维** | 带 3-5 人小组、技术分享 | 外部影响力：开源 / 大会 / 标准 / 行业判断 |
+
+---
+
+<small>💡 自评：编辑页面底部 <code>SKILL_SCORES</code> 中的 0-5 分，保存后刷新即可看到新雷达与缺口排序。</small>
+
 <style>
 :root {
   --bg: #ffffff;
@@ -236,6 +171,7 @@ tr:hover td { background: var(--card-bg); }
   .chart-box { height: 380px; }
 }
 </style>
+
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <script>
 // =============================================================
@@ -387,5 +323,3 @@ if (document.readyState === 'loading') {
   init();
 }
 </script>
-</body>
-</html>

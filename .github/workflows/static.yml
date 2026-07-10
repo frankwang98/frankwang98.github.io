@@ -33,12 +33,19 @@ jobs:
 
       - name: Convert Markdown to HTML
         run: |
-          pandoc --standalone \
-            --css=https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css \
-            -f markdown \
-            -t html5 \
-            index.md \
-            -o index.html
+          # 仅处理作为页面的 .md 文件；README.md（仓库说明）/ CLAUDE.md（AI 协作说明）不发布为网页
+          for f in *.md; do
+            [ "$f" = "README.md" ] && continue
+            [ "$f" = "CLAUDE.md" ] && continue
+            out="${f%.md}.html"
+            pandoc --standalone \
+              --css=https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css \
+              -f markdown \
+              -t html5 \
+              "$f" \
+              -o "$out"
+          done
+          ls -la *.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

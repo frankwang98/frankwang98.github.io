@@ -9,29 +9,30 @@
 | 项 | 值 |
 |---|---|
 | 仓库 | `frankwang98/frankwang98.github.io`（**User Page**） |
-| 类型 | 纯静态 GitHub Pages 个人主页 |
-| 域名 | `frankwang98.github.io`（由 `CNAME` 文件声明） |
-| 部署 | `main` 分支 push 后由 GitHub Pages 自动渲染 |
+| 类型 | 纯静态 GitHub Pages 个人主页（**技术个人品牌站点**） |
+| 域名 | `frankwang98.asia`（由 `CNAME` 文件声明） |
+| 部署 | push 到 `main` → `.github/workflows/static.yml` 用 `pandoc` 把根目录 `*.md` 转 `*.html` → GitHub Pages 部署 |
 | 主语言 | 中文（部分英文） |
+| 视觉系统 | 单页长滚动 + 极简 mono（`--text #0a0a0a` ↔ `#ededee`）+ 单一强调色 `--accent #6366F1` / 暗 `#818cf8` |
 
 ## 技术栈与构建
 
 - **没有 Jekyll 自定义配置**：无 `_config.yml`、无 `Gemfile`、无 `package.json`。
-- **运行时渲染**：GitHub Pages 启用默认 Jekyll（kramdown + minima theme 占位），但仓库内文件**刻意用内嵌 `<style>` 覆盖主题样式**，最终视觉由内嵌 CSS 控制。
+- **运行时渲染**：`.github/workflows/static.yml` 在 CI 中 `pandoc --standalone --self-contained ...` 转 `*.md` → `*.html`（`README.md` 与 `CLAUDE.md` 跳过），再由 GitHub Pages 部署。原仓库里**没有任何 Jekyll 主题产物**——最终视觉完全靠内嵌 `<style>` 控制。
 - **本地预览**：`pandoc` + `preview.sh`。**没有真正的打包工具**（无 Vite/Webpack）。
-- **第三方依赖**：通过 CDN 加载（`cdn.jsdelivr.net`）。例：ECharts、Pico CSS。
+- **第三方依赖**：通过 CDN 加载（`cdn.jsdelivr.net`）。例：ECharts。CSS 变量系统全部内联，不需要 Pico CSS（虽然 `preview.sh` 仍会带 Pico，但 GitHub Pages 部署版不带任何外部 CSS）。
 
 ## 关键文件
 
 | 路径 | 作用 |
 |---|---|
-| [`index.md`](index.md) | 首页（社交链接 + 项目 + 关注图 + GitHub repos 自动抓取） |
-| [`skillmap.md`](skillmap.md) | 能力图谱子页（雷达图对照 P6/P7 + 自动缺口排序，支持自评） |
+| [`index.md`](index.md) | 首页（单页长滚动：Hero / About+雷达 / Projects / Knowledge / Content / Journey / Footer + sticky nav + 主题切换） |
+| [`skillmap.md`](skillmap.md) | 能力图谱深度页（雷达图对照 P6/P7 + 自动缺口排序）— 旧链接 `skillmap.html` 仍可直访 |
+| [`404.md`](404.md) | GitHub Pages 404 fallback（与首页同一视觉语言） |
 | [`preview.sh`](preview.sh) | 本地预览脚本：`bash preview.sh [file.md]`，默认输出 `preview.html` |
 | [`preview.html`](preview.html) | `preview.sh` 生成的预览产物（**已 commit**，充当快照） |
-| [`CNAME`](CNAME) | 自定义域名 |
-| [`assets/`](assets/) | 静态资源（图标、二维码、pay 收款码、公众号二维码、本地 favicon） |
-| [`history/`](history/) | 历史归档页面（独立 HTML） |
+| [`CNAME`](CNAME) | 自定义域名 `frankwang98.asia` |
+| [`assets/`](assets/) | 静态资源（`frankwang98.png` 用作 Hero 头像 / favicon） |
 | `README.md` | 项目说明（GitHub 仓库页显示） |
 
 ## 关键约定（写新内容前先读这一节）
@@ -54,32 +55,35 @@ link: assets/xxx.png   # 仅首页用作头像
 
 > 多数页面**不需要 `layout`**，因为样式都内嵌覆盖了默认主题。如果需要 Jekyll 主题体系，加 `layout: default` 即可。
 
-### 3. 主题（Light / Dark）
+### 3. 视觉系统（CSS 变量）
+
+色彩基调：**Mono + 单一强调色**。白底用 `#ffffff` ↔ 暗底 `#0a0a0a`，文本在白底 `=#0a0a0a`，暗底 `=#ededee`，无第三方调色板。强调色 `electric indigo`：
+- Light: `--accent: #6366F1` / `--accent-soft: rgba(99,102,241,0.08)`
+- Dark:  `--accent: #818cf8` / `--accent-soft: rgba(129,140,248,0.12)`
 
 ```css
 :root {
   --bg: #ffffff;
-  --card-bg: #f6f8fa;
-  --border: #d0d7de;
-  --text: #24292f;
-  --text-dim: #57606a;
-  --accent: #0969da;
-  --link: #0969da;
+  --bg-elev: #f6f6f7;
+  --border: #e5e5e7;
+  --text: #0a0a0a;
+  --text-dim: #6b6b6b;
+  --accent: #6366F1;
+  --accent-2: #818cf8;
+  --accent-soft: rgba(99,102,241,0.08);
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0d1117;
-    --card-bg: #161b22;
-    --border: #30363d;
-    --text: #c9d1d9;
-    --text-dim: #8b9496;
-    --accent: #58a6ff;
-    --link: #58a6ff;
+    --bg: #0a0a0a; --bg-elev: #141416; --border: #262626;
+    --text: #ededee; --text-dim: #8a8a8e;
+    --accent: #818cf8; --accent-2: #a5b4fc; --accent-soft: rgba(129,140,248,0.12);
   }
 }
 ```
 
-新增页面若需要暗色支持，复制以上两段即可；变量名保持**全站统一**。
+主题切换：右上角 `theme-toggle` 按钮循环 `system → light → dark`，状态写在 `localStorage['fw.theme']`，通过 `document.documentElement[data-theme]` 覆盖 `prefers-color-scheme`。新增页面复用同一个变量名集合即可。
 
 ### 4. 资源引用规则
 
@@ -90,23 +94,27 @@ link: assets/xxx.png   # 仅首页用作头像
 
 ### 5. 内容写法
 
-- 小标题统一 `<h2>`，样式上小写、灰底色
-- 列表项使用项目符号（已有 `li::before` 注入 `•`）
-- 列表项目：**短链接 → 描述**
-- 折叠区优先用 `<details><summary>`，例：`index.md` 的 "All Repositories" 模块
+- **首页是单页长滚动**：所有内容都在 [`index.md`](index.md) 一个文件里，按 7 个 `<section id="...">` 排开（hero / about / projects / knowledge / content / journey / footer）。
+- 每个区块顶部用 `<p class="eyebrow">`（small uppercase mono + accent 颜色）打标签，紧接 `<h2>` 写区段标题。
+- 子标题层级：`h2`（section 标题）、`h3`（组标签如 "Open Source Tools"）、`h4`（卡片标题）。
+- 折叠区优先用 `<details><summary>`，但**当首选要**直接做成 `<article class="card">` 卡片（用 CSS 网格排版）。
+- HTML 卡片里**避免 Markdown 语法**（pandoc 在 HTML 内对 `**bold**` 等语法行为可能不一致）——直接用 `<strong>` / `<code>` 等原生标签。
 
-## 添加新子页的标准流程
+## 添加新子页 / 新区块的标准流程
 
-1. 在仓库根创建 `xxx.md`（不要放子目录，URL 就是 `xxx.html`）
-2. 顶部放 front matter：`title`、`description`
-3. 内容用 Markdown + 可选内嵌 `<style>` / `<script>`
-4. 在 [`index.md`](index.md) 增加一个导航入口到 `Pages` 区块
-5. 本地预览：
-   ```bash
-   bash preview.sh xxx.md
-   open preview.html
-   ```
-6. 浏览器开发者工具确认无报错后，commit + push（main 分支）
+> **当前策略**：首页是单页长滚动，新内容**优先作为新 `<section>` 添加到 [`index.md`](index.md)**。独立成 `xxx.md` 仅在内容深度超 800 行或主题明显独立时使用（如 [`skillmap.md`](skillmap.md) 是「深度版」雷达图）。
+
+**A. 仅在首页加区块：**
+1. 在 [`index.md`](index.md) 现有 `</section>` 之前插入新 `<section id="...">`
+2. 在 nav `<ul class="nav-links">` 里追加对应 `<a data-nav>` 链接（保持字母顺序友好即可）
+3. 复用已有的 CSS 变量与 `.card` / `.grid` 工具类，**只在样式需要新增时才写新规则**
+
+**B. 真的需要独立页：**
+1. 在仓库根创建 `xxx.md`（不要放子目录，URL 就是 `xxx.html`），顶部 frontmatter：`title`、`description`
+2. 内容开头用 `<p class="eyebrow">` + `<h1>` 收头，至少复制一份 `:root` 变量系统
+3. 如要让访客能到达新页，需要在 [`index.md`](index.md) Footer 之上加一个跳转入口（一般是 Footer 链接区，或 Hero CTA 的 ghost 按钮）
+4. 本地预览：`bash preview.sh xxx.md`（会覆盖 `preview.html`，预览完跑 `bash preview.sh index.md` 恢复）
+5. 浏览器 DevTools 无报错后 commit + push（main 分支）
 
 ## 写"能力图谱"类页面的注意事项
 

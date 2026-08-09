@@ -1,200 +1,932 @@
 ---
-title: Frank's Home Page
-description: DevFrank's homepage - developer, open source enthusiast, sharing tech knowledge
-link: assets/frankwang98.png
+title: Frank Wang — Robotics Engineer · AI Explorer · Tech Creator
+description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 · 工程经验 · 个人成长。
 ---
 
-🔧 Developer & 💻 Open source enthusiast
+<nav class="topnav">
+  <a class="brand" href="#hero"><span class="monogram">FW</span><span class="brand-name">Frank Wang</span></a>
+  <ul class="nav-links">
+  <li><a href="#about" data-nav>About</a></li>
+  <li><a href="#projects" data-nav>Projects</a></li>
+  <li><a href="#knowledge" data-nav>Knowledge</a></li>
+  <li><a href="#content" data-nav>Content</a></li>
+  <li><a href="#journey" data-nav>Journey</a></li>
+  </ul>
+  <button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题">
+  <span class="ico-system">◐</span><span class="ico-light">☀</span><span class="ico-dark">☾</span>
+  </button>
+</nav>
 
-分享有用的科技&生活知识～ 学习笔记｜日常记录｜实用软件
+<section id="hero" class="hero">
+  <img class="avatar" src="assets/frankwang98.png" alt="Frank Wang" width="96" height="96">
+  <h1 class="name">Frank Wang</h1>
+  <p class="role">Robotics Engineer · AI Explorer · Tech Creator</p>
+  <p class="tagline">探索机器人、AI 与未来科技。<br>分享技术实践、工程经验、效率工具与个人成长。</p>
+  <div class="cta-row">
+  <a class="btn primary" href="#projects">🚀 Projects</a>
+  <a class="btn ghost" href="#content">📝 Content</a>
+  <a class="btn ghost" href="#knowledge">🌎 Knowledge</a>
+  </div>
+</section>
 
----
+<section id="about" class="about">
+  <div class="about-text">
+  <p class="eyebrow">ABOUT</p>
+  <h2>机器人方向软件工程师</h2>
+  <p>我是 <strong>Frank Wang</strong>，从 C++ 工程基础出发，逐步走进机器人与自动驾驶的世界。现在我更关心一件事——把 <strong>AI 带进真实的物理系统</strong>。</p>
+  <p>希望用技术实践和内容分享，记录探索未来科技的过程。</p>
+  <div class="chips">
+  <span class="chip">Robotics</span>
+  <span class="chip">Autonomous Driving</span>
+  <span class="chip">C++</span>
+  <span class="chip">ROS2</span>
+  <span class="chip">AI Technology</span>
+  </div>
+  </div>
+  <div class="about-chart">
+  <p class="eyebrow">CAPABILITY · RADAR</p>
+  <p class="chart-caption">当前能力 ↔ P7 资深参考 · 点击展开深度版 ↓</p>
+  <div id="radar" class="radar"></div>
+  <a class="chart-link" href="skillmap.html">📊 完整能力图谱（P6 / P7 对照）→</a>
+  </div>
+</section>
 
-## Links
+<section id="projects" class="projects">
+  <p class="eyebrow">PROJECTS</p>
+  <h2>做过的开源项目 & 产品</h2>
+  <p class="section-sub">精选的 6 个项目，分两类：CLI 工具集、Web / 小程序应用。</p>
 
-[<img src="https://github.githubassets.com/favicon.ico" width="16" height="16"> GitHub](https://github.com/frankwang98)
-&nbsp;&nbsp;
-[<img src="assets/csdn.png" width="16" height="16"> CSDN](https://devfrank.blog.csdn.net/)
-&nbsp;&nbsp;
-[<img src="https://bilibili.com/favicon.ico" width="16" height="16"> Bilibili](https://space.bilibili.com/286686575)
-&nbsp;&nbsp;
-<span class="gzh-pop"><img src="https://mp.weixin.qq.com/favicon.ico" width="16" height="16">公众号<img src="assets/gzh.jpg" class="gzh-img"></span>
-&nbsp;&nbsp;
-[📧 Email](mailto:854714081@qq.com)
+  <h3 class="group-label">Open Source Tools</h3>
+  <div class="grid">
+  <article class="card">
+  <div class="card-head">
+  <h4>ip-CLI</h4>
+  <span class="stars" data-repo="frankwang98/ipdisp" title="GitHub stars">★ …</span>
+  </div>
+  <p>IP / 网络工具命令行，pip 包 <code>ipdisp</code>。</p>
+  <div class="tech"><span>Python</span><span>CLI</span><span>PyPI</span></div>
+  <a class="ext" href="https://pypi.org/project/ipdisp/" rel="noopener">↗ PyPI</a>
+  <a class="ext" href="https://github.com/frankwang98/ipdisp" rel="noopener">↗ GitHub</a>
+  </article>
+  <article class="card">
+  <div class="card-head">
+  <h4>gitkpi</h4>
+  <span class="stars" data-repo="frankwang98/gitkpi" title="GitHub stars">★ …</span>
+  </div>
+  <p>Git 工作流指标 CLI，pip 包 <code>gitkpi</code>。</p>
+  <div class="tech"><span>Python</span><span>CLI</span><span>Git</span></div>
+  <a class="ext" href="https://pypi.org/project/gitkpi/" rel="noopener">↗ PyPI</a>
+  <a class="ext" href="https://github.com/frankwang98/gitkpi" rel="noopener">↗ GitHub</a>
+  </article>
+  <article class="card">
+  <div class="card-head">
+  <h4>mysetuptool</h4>
+  <span class="stars" data-repo="frankwang98/mysetuptool" title="GitHub stars">★ …</span>
+  </div>
+  <p>新机环境一键配置工具（pip / shell）。</p>
+  <div class="tech"><span>Python</span><span>Setup</span></div>
+  <a class="ext" href="https://pypi.org/project/mysetuptool/" rel="noopener">↗ PyPI</a>
+  <a class="ext" href="https://github.com/frankwang98/mysetuptool" rel="noopener">↗ GitHub</a>
+  </article>
+  </div>
 
-<style>
-.gzh-pop { position: relative; cursor: pointer; display: inline-block; }
-.gzh-img {
-  display: none;
-  position: absolute;
-  top: 1.5rem;
-  left: 0;
-  width: 380px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  z-index: 100;
-}
-.gzh-pop:hover .gzh-img { display: block; }
-</style>
+  <h3 class="group-label">Applications</h3>
+  <div class="grid">
+  <article class="card">
+  <div class="card-head">
+  <h4>柠檬百宝盒</h4>
+  </div>
+  <p>微信小程序，日常实用工具集合。</p>
+  <div class="tech"><span>WeChat Mini-App</span></div>
+  <span class="ext muted">↗ 微信搜索「柠檬百宝盒」</span>
+  </article>
+  <article class="card">
+  <div class="card-head">
+  <h4>柠檬大消除</h4>
+  </div>
+  <p>休闲小游戏，水果消除玩法。</p>
+  <div class="tech"><span>WeChat Mini-App</span><span>Game</span></div>
+  <span class="ext muted">↗ 微信搜索「柠檬大消除」</span>
+  </article>
+  <article class="card">
+  <div class="card-head">
+  <h4>tools · 在线工具集</h4>
+  <span class="stars" data-repo="frankwang98/tools-two-delta" title="GitHub stars">★ …</span>
+  </div>
+  <p>Web 端开发者在线工具集合（部署在 Vercel）。</p>
+  <div class="tech"><span>Web</span><span>Vercel</span></div>
+  <a class="ext" href="https://tools-two-delta.vercel.app/" rel="noopener">↗ Open</a>
+  </article>
+  </div>
+</section>
 
----
+<section id="knowledge" class="knowledge">
+  <p class="eyebrow">KNOWLEDGE · TECH NOTES</p>
+  <h2>知识体系</h2>
+  <p class="section-sub">技术笔记将按以下 4 类组织。内容正在建设中——我会在 GitHub repo 中逐步沉淀实战笔记、踩坑记录与教科书片段。</p>
 
-## Projects
+  <div class="grid knowledge">
+  <article class="card">
+  <div class="big-emoji" aria-hidden="true">🤖</div>
+  <h4>Robotics</h4>
+  <ul class="tags">
+  <li>ROS2</li><li>Navigation</li><li>Sensor Fusion</li>
+  </ul>
+  <p class="placeholder">构建中 · slam / nav2 / rviz 实战</p>
+  </article>
+  <article class="card">
+  <div class="big-emoji" aria-hidden="true">💻</div>
+  <h4>Programming</h4>
+  <ul class="tags">
+  <li>C++ Modern</li><li>Linux</li><li>Software Engineering</li>
+  </ul>
+  <p class="placeholder">构建中 · C++ 工程实践 / Linux 内核碎片</p>
+  </article>
+  <article class="card">
+  <div class="big-emoji" aria-hidden="true">🧠</div>
+  <h4>AI</h4>
+  <ul class="tags">
+  <li>AI Tools</li><li>LLM</li><li>AI Workflow</li>
+  </ul>
+  <p class="placeholder">构建中 · 模型选型 / Agent 编排 / 评测</p>
+  </article>
+  <article class="card">
+  <div class="big-emoji" aria-hidden="true">🌍</div>
+  <h4>Trends</h4>
+  <ul class="tags">
+  <li>AI Industry</li><li>Future Technology</li>
+  </ul>
+  <p class="placeholder">构建中 · 行业观察 / 趋势记录</p>
+  </article>
+  </div>
+</section>
 
-- 柠檬百宝盒 - 微信小程序，日常实用工具集合
-- 柠檬大消除 - 休闲小游戏，水果消除玩法
-- [ip-CLI工具箱](https://pypi.org/project/ipdisp/) - pip包 `pip install ipdisp`
-- [gitkpi-CLI工具箱](https://pypi.org/project/gitkpi/) - pip包 `pip install gitkpi`
-- [mysetuptool](https://pypi.org/project/mysetuptool/) - pip包 `pip install mysetuptool`
-- [tools](https://tools-two-delta.vercel.app/) - 开发者在线工具集合
+<section id="content" class="content">
+  <p class="eyebrow">CONTENT</p>
+  <h2>我输出的地方</h2>
+  <p class="section-sub">分散在 4 个平台，按内容深度 / 形式分工。</p>
 
----
+  <div class="grid content">
+  <a class="card link-card" href="https://www.xiaohongshu.com/user/profile/5c6f6640000000001200d262?xsec_token=ABNvoM7f1Hcfl-OIJ5oXlD5oYBca1Bq_C2H9626h9B0Vo%3D&amp;xsec_source=pc_search" rel="noopener">
+  <div class="big-emoji" aria-hidden="true">🌸</div>
+  <h4>小红书</h4>
+  <p>科技趋势 · AI 工具 · 排行榜内容</p>
+  <span class="ext">↗ @ 弗兰克王 →</span>
+  </a>
+  <article class="card muted-card">
+  <div class="big-emoji" aria-hidden="true">📮</div>
+  <h4>公众号</h4>
+  <p>深度技术文章（建设中）</p>
+  <span class="ext muted">即将上线</span>
+  </article>
+  <a class="card link-card" href="https://devfrank.blog.csdn.net/" rel="noopener">
+  <div class="big-emoji" aria-hidden="true">💻</div>
+  <h4>CSDN</h4>
+  <p>工程实践笔记 · 长文记录</p>
+  <span class="ext">↗ devfrank.blog.csdn.net →</span>
+  </a>
+  <a class="card link-card" href="https://space.bilibili.com/286686575" rel="noopener">
+  <div class="big-emoji" aria-hidden="true">📺</div>
+  <h4>Bilibili</h4>
+  <p>技术视频 · 演示与分享</p>
+  <span class="ext">↗ space.bilibili.com →</span>
+  </a>
+  </div>
+</section>
 
-## Donate
+<section id="journey" class="journey">
+  <p class="eyebrow">JOURNEY</p>
+  <h2>我的成长路线</h2>
+  <p class="section-sub">从 C++ 出发，逐步把工程能力延伸到物理世界与 AI 智能化。</p>
 
-<div class="donate-imgs">
-  <img src="assets/wechat.png" alt="wechat">
-  <img src="assets/alipay.png" alt="alipay">
-</div>
+  <ol class="timeline">
+  <li class="t-node">
+  <span class="t-dot"></span>
+  <div class="t-body">
+  <h4>C++ · 工程基础</h4>
+  <p class="t-period">2018 — 2020</p>
+  <p class="t-note">现代 C++ / 模板 / 系统编程入坑。</p>
+  </div>
+  </li>
+  <li class="t-node">
+  <span class="t-dot"></span>
+  <div class="t-body">
+  <h4>Robotics · 进入机器人方向</h4>
+  <p class="t-period">2020 — 2022</p>
+  <p class="t-note">ROS / 感知 / 控制 — 让代码长出物理反馈。</p>
+  </div>
+  </li>
+  <li class="t-node">
+  <span class="t-dot"></span>
+  <div class="t-body">
+  <h4>Autonomous Driving · 自动驾驶</h4>
+  <p class="t-period">2022 — 2024</p>
+  <p class="t-note">规划 / 定位 / 多模块协同 — 在大规模系统上做权衡。</p>
+  </div>
+  </li>
+  <li class="t-node">
+  <span class="t-dot t-now"></span>
+  <div class="t-body">
+  <h4>AI + Robotics · 把 AI 带进真实物理系统</h4>
+  <p class="t-period">2024 — 现在</p>
+  <p class="t-note">端到端 / VLM / 数据闭环 — 做出可落地的智能化。</p>
+  </div>
+  </li>
+  </ol>
+</section>
 
----
-
-## All Repositories
-
-<details>
-<summary>Click to expand</summary>
-
-<div id="repos-container">
-  <p>Loading...</p>
-</div>
-
-</details>
-
----
-
-<small>Tribute to https://www.bellard.org/</small>
+<footer class="footer">
+  <p class="ft-lead">Built with passion for technology.</p>
+  <p class="ft-line">© 2026 Frank Wang &nbsp;·&nbsp; AI · Robotics · Open Source</p>
+  <ul class="ft-links">
+  <li><a href="https://github.com/frankwang98" rel="noopener">GitHub</a></li>
+  <li><a href="https://devfrank.blog.csdn.net/" rel="noopener">CSDN</a></li>
+  <li><a href="https://space.bilibili.com/286686575" rel="noopener">Bilibili</a></li>
+  <li><a href="https://www.xiaohongshu.com/user/profile/5c6f6640000000001200d262?xsec_token=ABNvoM7f1Hcfl-OIJ5oXlD5oYBca1Bq_C2H9626h9B0Vo%3D&amp;xsec_source=pc_search" rel="noopener">小红书</a></li>
+  </ul>
+  <p class="ft-tribute"><small>Tribute to <a href="https://www.bellard.org/">bellard.org</a></small></p>
+</footer>
 
 <style>
 :root {
   --bg: #ffffff;
-  --card-bg: #f6f8fa;
-  --border: #d0d7de;
-  --text: #24292f;
-  --text-dim: #57606a;
-  --accent: #0969da;
-  --link: #0969da;
+  --bg-elev: #f6f6f7;
+  --border: #e5e5e7;
+  --text: #0a0a0a;
+  --text-dim: #6b6b6b;
+  --accent: #6366F1;
+  --accent-2: #818cf8;
+  --accent-soft: rgba(99,102,241,0.08);
+  --radius: 10px;
+  --maxw: 760px;
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0d1117;
-    --card-bg: #161b22;
-    --border: #30363d;
-    --text: #c9d1d9;
-    --text-dim: #8b949e;
-    --accent: #58a6ff;
-    --link: #58a6ff;
+  --bg: #0a0a0a;
+  --bg-elev: #141416;
+  --border: #262626;
+  --text: #ededee;
+  --text-dim: #8a8a8e;
+  --accent: #818cf8;
+  --accent-2: #a5b4fc;
+  --accent-soft: rgba(129,140,248,0.12);
   }
+}
+html[data-theme='light'] {
+  --bg: #ffffff; --bg-elev: #f6f6f7; --border: #e5e5e7;
+  --text: #0a0a0a; --text-dim: #6b6b6b;
+  --accent: #6366F1; --accent-2: #818cf8; --accent-soft: rgba(99,102,241,0.08);
+}
+html[data-theme='dark'] {
+  --bg: #0a0a0a; --bg-elev: #141416; --border: #262626;
+  --text: #ededee; --text-dim: #8a8a8e;
+  --accent: #818cf8; --accent-2: #a5b4fc; --accent-soft: rgba(129,140,248,0.12);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+html { scroll-behavior: smooth; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.65;
   background: var(--bg);
   color: var(--text);
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--accent); text-decoration: none; transition: color .15s ease; }
+a:hover { color: var(--accent-2); }
+img { max-width: 100%; }
+
+/* container */
+.container, body > nav, body > section, body > footer {
+  display: block;
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
-h2 { font-size: 0.85rem; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin: 1.5rem 0 0.75rem; }
-
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
-
-small { color: var(--text-dim); font-size: 0.8rem; }
-
-ul { list-style: none; }
-li { margin: 0.4rem 0; font-size: 0.85rem; }
-li::before { content: '•'; color: var(--accent); margin-right: 0.5rem; }
-
-/* Donate */
-.donate-imgs {
+/* ---------- Sticky top nav ---------- */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
+  align-items: center;
+  gap: 1.25rem;
+  height: 56px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border);
+  max-width: 100%;
 }
-.donate-imgs img {
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: var(--card-bg);
-  padding: 0.5rem;
-  border: 1px solid var(--border);
+.brand { display: inline-flex; align-items: center; gap: .55rem; color: var(--text); font-weight: 700; }
+.brand:hover { color: var(--text); }
+.monogram {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 7px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: -.04em;
 }
+.brand-name { font-size: 14px; letter-spacing: -.01em; }
 
-/* Repos */
-#repos-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
-
-#repos-container article {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.75rem;
+.nav-links {
+  list-style: none;
+  display: flex; gap: 1.1rem;
+  margin: 0 auto 0 0;
+  padding: 0;
 }
-
-#repos-container a { font-weight: 600; font-size: 0.95rem; }
-#repos-container small { display: block; color: var(--text-dim); font-size: 0.8rem; margin: 0.25rem 0 0.5rem; line-height: 1.4; }
-#repos-container div { display: flex; gap: 0.75rem; font-size: 0.75rem; color: var(--text-dim); }
-
-kbd {
-  background: var(--card-bg);
+.nav-links a {
   color: var(--text-dim);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 0.1rem 0.4rem;
-  font-size: 0.75rem;
-  font-family: monospace;
+  font-size: 13px;
+  padding: .25rem .15rem;
+  border-bottom: 1.5px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.is-active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
 }
 
-details { margin-top: 0.5rem; }
-summary {
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  font-size: 15px;
   cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .15s, border-color .15s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle .ico-light, .theme-toggle .ico-dark { display: none; }
+:root .theme-toggle .ico-system {}
+html[data-theme='light'] .theme-toggle .ico-system { display: none; }
+html[data-theme='light'] .theme-toggle .ico-light { display: inline; }
+html[data-theme='dark']  .theme-toggle .ico-system { display: none; }
+html[data-theme='dark']  .theme-toggle .ico-dark  { display: inline; }
+
+/* ---------- Sections base ---------- */
+section {
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
+}
+section:first-of-type { padding-top: 3rem; }
+
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
-  padding: 0.5rem 0;
+  margin-bottom: .35rem;
+  font-family: var(--font-mono);
 }
-summary:hover { color: var(--text); }
+h1, h2, h3, h4 { letter-spacing: -.02em; color: var(--text); }
+h2 { font-size: clamp(1.6rem, 4vw, 2rem); font-weight: 700; margin-bottom: .6rem; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+h4 { font-size: .98rem; font-weight: 600; }
+.section-sub { color: var(--text-dim); font-size: 14px; max-width: 60ch; margin-top: .25rem; margin-bottom: 1.5rem; }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+}
+.avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  margin-bottom: 1.2rem;
+  display: block;
+  margin-left: auto; margin-right: auto;
+  background: var(--bg-elev);
+}
+.name {
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+  margin-bottom: .6rem;
+}
+.role {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1.4rem;
+}
+.tagline {
+  color: var(--text-dim);
+  font-size: 15px;
+  max-width: 460px; margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+.cta-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .65rem;
+}
+.btn {
+  display: inline-flex; align-items: center;
+  padding: .55rem 1.05rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13.5px;
+  border: 1px solid transparent;
+  transition: transform .1s, background .15s, border-color .15s, color .15s;
+}
+.btn:hover { text-decoration: none; }
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn.primary:hover { background: var(--accent-2); color: #fff; transform: translateY(-1px); }
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.btn.ghost:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ---------- About ---------- */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.25rem;
+  align-items: start;
+}
+@media (max-width: 720px) {
+  .about { grid-template-columns: 1fr; gap: 1.75rem; }
+}
+.about-text h2 { margin-bottom: .75rem; }
+.about-text p { margin-bottom: .8rem; color: var(--text); }
+.about-text p strong { color: var(--text); font-weight: 600; }
+.about-text p:nth-of-type(2) { color: var(--text-dim); }
+
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+.chip {
+  display: inline-block;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.about-chart {
+  position: sticky;
+  top: 80px;
+}
+.chart-caption {
+  font-size: 12px; color: var(--text-dim); margin-bottom: .6rem;
+  font-family: var(--font-mono);
+}
+.radar {
+  width: 100%;
+  height: 280px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+}
+.chart-link {
+  display: inline-block;
+  margin-top: .8rem;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+/* ---------- Projects / Knowledge / Content grid ---------- */
+.group-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--text-dim);
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  font-family: var(--font-mono);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  transition: border-color .15s, transform .15s;
+}
+.card:hover { border-color: var(--accent); }
+.card-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: .5rem;
+}
+.card p { font-size: 13.5px; color: var(--text-dim); margin: 0; line-height: 1.55; }
+.card code {
+  font-family: var(--font-mono);
+  background: var(--bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+}
+.tech { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; }
+.tech span {
+  font-size: 11.5px;
+  padding: .12rem .55rem;
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+.stars {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.ext {
+  display: inline-block;
+  margin-right: .9rem;
+  font-size: 12.5px;
+  color: var(--accent);
+  margin-top: .15rem;
+}
+.ext:hover { color: var(--accent-2); }
+.ext.muted { color: var(--text-dim); }
+
+.link-card { color: var(--text); }
+.link-card:hover { color: var(--text); border-color: var(--accent); }
+.muted-card { opacity: .85; }
+
+.big-emoji { font-size: 28px; line-height: 1; }
+.tags {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: .3rem;
+}
+.tags li {
+  font-size: 11.5px;
+  padding: .12rem .55rem;
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+.placeholder {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-style: italic;
+  border-left: 2px solid var(--accent);
+  padding-left: .6rem;
+  margin-top: .25rem;
+}
+
+/* ---------- Journey timeline ---------- */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+.t-node {
+  position: relative;
+  padding: .25rem 0 1.5rem 1.6rem;
+}
+.t-dot {
+  position: absolute;
+  left: 0; top: .55rem;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+.t-now { background: var(--accent-2); }
+.t-body h4 { margin-bottom: .2rem; }
+.t-period {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-dim);
+  letter-spacing: .04em;
+  margin-bottom: .35rem;
+}
+.t-note { font-size: 13.5px; color: var(--text-dim); }
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.ft-lead { font-family: var(--font-mono); color: var(--text); margin-bottom: .8rem; font-size: 13px; }
+.ft-line { margin-bottom: 1rem; font-size: 12.5px; }
+.ft-links {
+  list-style: none;
+  display: flex; justify-content: center; gap: 1rem;
+  padding: 0; margin: 0 0 1.2rem;
+  flex-wrap: wrap;
+}
+.ft-links a { font-size: 13px; color: var(--text-dim); }
+.ft-links a:hover { color: var(--accent); }
+.ft-tribute { font-size: 11.5px; opacity: .7; }
+
+/* ---------- Responsive nav (mobile hamburger) ---------- */
+@media (max-width: 640px) {
+  .topnav { gap: .65rem; padding: 0 .8rem; }
+  .brand-name { display: none; }
+  .nav-links {
+  position: fixed; inset: 56px 0 auto 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  gap: .8rem;
+  display: none;
+  margin: 0;
+  }
+  .topnav.is-open .nav-links { display: flex; }
+  .topnav .nav-links a { font-size: 14px; padding: .35rem 0; border: none; }
+  .topnav .nav-links a.is-active { color: var(--accent); }
+  .topnav .menu-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  }
+}
+
+/* Show hamburger button only on mobile */
+.topnav .menu-btn { display: none; }
+/* Insert menu-btn via ::before — simpler: render the button in markup. But pandoc may filter; we inject via JS. */
 </style>
 
+<noscript>
+  <style>
+  .theme-toggle { display: none; }
+  </style>
+</noscript>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <script>
-(async function() {
-  const container = document.getElementById('repos-container');
-  try {
-    const res = await fetch('https://api.github.com/users/frankwang98/repos?sort=updated&per_page=100');
-    const repos = await res.json();
-    if (!Array.isArray(repos)) throw new Error('Failed to fetch');
-    const html = repos.map(repo => `
-      <article>
-        <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-        <small>${repo.description || 'No description'}</small>
-        <div>
-          ${repo.language ? `<kbd>${repo.language}</kbd>` : ''}
-          <kbd>★ ${repo.stargazers_count}</kbd>
-          <kbd>⑂ ${repo.forks_count}</kbd>
-        </div>
-      </article>
-    `).join('');
-    container.innerHTML = html;
-  } catch(e) {
-    container.innerHTML = '<p>Failed to load repositories</p>';
+// =============================================================
+// Theme switch (system / light / dark) with localStorage
+// =============================================================
+(function(){
+  var KEY = 'fw.theme';
+  function apply(theme){
+  if (theme === 'system' || !theme) {
+  document.documentElement.removeAttribute('data-theme');
+  } else {
+  document.documentElement.setAttribute('data-theme', theme);
   }
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch(e){}
+  if (!saved) saved = 'system';
+  apply(saved);
+
+  var btn = document.querySelector('.theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+  var cur = document.documentElement.getAttribute('data-theme') || 'system';
+  var next = cur === 'system' ? 'light' : (cur === 'light' ? 'dark' : 'system');
+  apply(next);
+  try { localStorage.setItem(KEY, next); } catch(e){}
+  });
+})();
+
+// =============================================================
+// Inject mobile hamburger button + toggle behavior
+// =============================================================
+(function(){
+  var nav = document.querySelector('.topnav');
+  if (!nav) return;
+  var btn = document.createElement('button');
+  btn.className = 'menu-btn';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', '打开导航');
+  btn.innerHTML = '☰';
+  btn.addEventListener('click', function(e){
+  e.stopPropagation();
+  nav.classList.toggle('is-open');
+  });
+  // Insert before the theme toggle
+  nav.insertBefore(btn, nav.querySelector('.theme-toggle'));
+
+  // Close on outside click / link click
+  document.addEventListener('click', function(e){
+  if (!nav.contains(e.target)) nav.classList.remove('is-open');
+  });
+  nav.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click', function(){ nav.classList.remove('is-open'); });
+  });
+})();
+
+// =============================================================
+// Active section highlight on scroll (IntersectionObserver)
+// =============================================================
+(function(){
+  var links = document.querySelectorAll('[data-nav]');
+  if (!links.length) return;
+  var targets = {};
+  links.forEach(function(l){
+  var id = l.getAttribute('href').slice(1);
+  var el = document.getElementById(id);
+  if (el) targets[id] = { link: l, el: el };
+  });
+  function setActive(id){
+  links.forEach(function(l){ l.classList.remove('is-active'); });
+  if (targets[id]) targets[id].link.classList.add('is-active');
+  }
+  var observer = new IntersectionObserver(function(entries){
+  // Pick the topmost intersecting
+  var visible = entries
+  .filter(function(e){ return e.isIntersecting; })
+  .sort(function(a,b){ return a.boundingClientRect.top - b.boundingClientRect.top; })[0];
+  if (visible) setActive(visible.target.id);
+  }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+  Object.values(targets).forEach(function(t){ observer.observe(t.el); });
+})();
+
+// =============================================================
+// ECharts radar — current + P7 reference (P6 dropped for noise reduction)
+// Lazy init on intersection
+// =============================================================
+const SKILL_SCORES = {
+  'C++ 系统编程': 3,
+  'Python / 数据 / ML': 4,
+  '机器人 / 自动驾驶 领域': 3,
+  '系统整合能力': 3,
+  '数学 / 算法 / 前沿': 4,
+  '工程化与架构': 3,
+  '影响力与产品思维': 2,
+};
+const P7_SCORES = {
+  'C++ 系统编程': 4.5,
+  'Python / 数据 / ML': 4.5,
+  '机器人 / 自动驾驶 领域': 4.7,
+  '系统整合能力': 4.7,
+  '数学 / 算法 / 前沿': 4.5,
+  '工程化与架构': 4.6,
+  '影响力与产品思维': 4.5,
+};
+const CATEGORIES = Object.keys(SKILL_SCORES);
+
+function isDark() {
+  var stored = document.documentElement.getAttribute('data-theme');
+  if (stored === 'dark' || stored === 'light') return stored === 'dark';
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+let radarChart;
+function renderRadar(){
+  var el = document.getElementById('radar');
+  if (!el || typeof echarts === 'undefined') return;
+  if (radarChart) radarChart.dispose();
+  radarChart = echarts.init(el, isDark() ? 'dark' : null);
+  var s = getComputedStyle(document.body);
+  var dark = isDark();
+  radarChart.setOption({
+  backgroundColor: 'transparent',
+  tooltip: { trigger: 'item' },
+  radar: {
+  indicator: CATEGORIES.map(function(c){ return { name: c, max: 5 }; }),
+  splitArea: {
+  areaStyle: {
+  color: dark ? ['rgba(20,20,22,0.4)', 'rgba(38,38,38,0.4)'] : ['rgba(246,246,247,0.4)', 'rgba(229,229,231,0.4)']
+  }
+  },
+  splitLine: { lineStyle: { color: dark ? '#262626' : '#e5e5e7' } },
+  axisLine:   { lineStyle: { color: dark ? '#262626' : '#e5e5e7' } },
+  axisName: { color: s.getPropertyValue('--text-dim'), fontSize: 11 }
+  },
+  series: [{
+  type: 'radar',
+  symbol: 'circle',
+  symbolSize: 4,
+  data: [
+  {
+  name: '当前',
+  value: CATEGORIES.map(function(c){ return SKILL_SCORES[c]; }),
+  areaStyle: { opacity: 0.30, color: '#6366F1' },
+  lineStyle: { color: '#6366F1', width: 2 },
+  itemStyle: { color: '#6366F1' }
+  },
+  {
+  name: 'P7 资深',
+  value: CATEGORIES.map(function(c){ return P7_SCORES[c]; }),
+  areaStyle: { opacity: 0.06, color: '#a5b4fc' },
+  lineStyle: { color: '#a5b4fc', width: 1.5, type: 'dashed' },
+  itemStyle: { color: '#a5b4fc' }
+  }
+  ]
+  }]
+  });
+}
+function renderRadarGaps(){} // no-op for home (gaps are inferred from data shape)
+
+(function(){
+  if (typeof echarts === 'undefined') return;
+  var el = document.getElementById('radar');
+  if (!el) return;
+  var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+  if (e.isIntersecting) {
+  renderRadar();
+  observer.disconnect();
+  }
+  });
+  }, { rootMargin: '200px 0px' });
+  observer.observe(el);
+  window.addEventListener('resize', function(){ if (radarChart) radarChart.resize(); });
+  // Re-render on theme change
+  if (window.matchMedia) {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', renderRadar);
+  }
+  // Theme toggle already toggles data-theme — observe attribute changes for re-render
+  new MutationObserver(renderRadar).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+
+// =============================================================
+// GitHub repo star fetcher (one fetch, populate .stars[data-repo])
+// Best-effort: failure leaves the placeholder text unchanged.
+// =============================================================
+(function(){
+  var els = document.querySelectorAll('.stars[data-repo]');
+  if (!els.length) return;
+  var paths = Array.from(els).map(function(e){ return e.getAttribute('data-repo').replace(/^[\s\S]*?\//, ''); }).filter(Boolean);
+  fetch('https://api.github.com/users/frankwang98/repos?per_page=100')
+  .then(function(r){ return r.ok ? r.json() : null; })
+  .then(function(repos){
+  if (!Array.isArray(repos)) return;
+  var byName = {};
+  repos.forEach(function(repo){
+  byName[repo.name] = repo;
+  });
+  els.forEach(function(el){
+  var fullPath = el.getAttribute('data-repo'); // "owner/name"
+  var parts = fullPath.split('/');
+  var name = parts[parts.length - 1];
+  var r = byName[name];
+  if (r && typeof r.stargazers_count === 'number') {
+  el.textContent = '★ ' + r.stargazers_count;
+  } else {
+  el.textContent = '★ —';
+  el.style.opacity = '.6';
+  }
+  });
+  })
+  .catch(function(){
+  els.forEach(function(el){
+  el.textContent = '★ —';
+  el.style.opacity = '.5';
+  });
+  });
 })();
 </script>

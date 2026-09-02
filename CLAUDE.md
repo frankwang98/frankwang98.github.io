@@ -18,9 +18,9 @@
 ## 技术栈与构建
 
 - **没有 Jekyll 自定义配置**：无 `_config.yml`、无 `Gemfile`、无 `package.json`。
-- **运行时渲染**：`.github/workflows/static.yml` 在 CI 中 `pandoc --standalone --self-contained ...` 转 `*.md` → `*.html`（`README.md` 与 `CLAUDE.md` 跳过），再由 GitHub Pages 部署。原仓库里**没有任何 Jekyll 主题产物**——最终视觉完全靠内嵌 `<style>` 控制。
+- **运行时渲染**：`.github/workflows/static.yml` 在 CI 中 `pandoc --standalone --include-in-header=partials/head-{name}.html ...` 转 `*.md` → `*.html`（`README.md` 与 `CLAUDE.md` 跳过），再由 GitHub Pages 部署。原仓库里**没有任何 Jekyll 主题产物**——最终视觉完全靠内嵌 `<style>` 控制，CI 也不再外链 Pico CSS（已被 inline `<style>` 全面覆盖）。
 - **本地预览**：`pandoc` + `preview.sh`。**没有真正的打包工具**（无 Vite/Webpack）。
-- **第三方依赖**：通过 CDN 加载（`cdn.jsdelivr.net`）。例：ECharts。CSS 变量系统全部内联，不需要 Pico CSS（虽然 `preview.sh` 仍会带 Pico，但 GitHub Pages 部署版不带任何外部 CSS）。
+- **第三方依赖**：通过 CDN 加载（`cdn.jsdelivr.net`）。例：ECharts。CSS 变量系统全部内联。ECharts 通过 IntersectionObserver + 动态注入懒加载，不阻塞首屏。
 
 ## 关键文件
 
@@ -29,10 +29,11 @@
 | [`index.md`](index.md) | 首页（单页长滚动：Hero / About+雷达 / Projects / Knowledge / Content / Journey / Footer + sticky nav + 主题切换） |
 | [`skillmap.md`](skillmap.md) | 能力图谱深度页（雷达图对照 P6/P7 + 自动缺口排序）— 旧链接 `skillmap.html` 仍可直访 |
 | [`404.md`](404.md) | GitHub Pages 404 fallback（与首页同一视觉语言） |
-| [`preview.sh`](preview.sh) | 本地预览脚本：`bash preview.sh [file.md]`，默认输出 `preview.html` |
+| [`preview.sh`](preview.sh) | 本地预览脚本：`bash preview.sh [file.md]`，默认输出 `preview.html`（与 CI pipeline 同步使用 `partials/head-{name}.html`） |
 | [`preview.html`](preview.html) | `preview.sh` 生成的预览产物（**已 commit**，充当快照） |
+| [`partials/head-{index,skillmap,404}.html`](partials/) | pandoc `--include-in-header` 注入的 `<head>` 片段（charset / viewport / theme-color / preconnect / OG / Twitter / canonical）。新增页面时记得同步建一个 |
 | [`CNAME`](CNAME) | 自定义域名 `frankwang98.asia` |
-| [`assets/`](assets/) | 静态资源（`frankwang98.png` 用作 Hero 头像 / favicon） |
+| [`assets/`](assets/) | 静态资源：`frankwang98.png`（Hero 头像 / favicon）+ `frankwang98.webp` / `frankwang98-192.webp`（同图 WebP，用于 `<picture>` + retina）；`alipay.png` / `wechat.png`（QR 码）+ 对应 `.webp` 副本 |
 | `README.md` | 项目说明（GitHub 仓库页显示） |
 
 ## 关键约定（写新内容前先读这一节）
@@ -150,7 +151,9 @@ function renderGaps()   { ... }     // 自动排序并显示 Δ
 - pandoc 与 Jekyll 渲染在**表格列宽**、**`<details>` 默认状态**等细节上偶有差异，重要布局建议同时在浏览器和 `preview.html` 比对。
 - `CNAME` 文件**不要删除**，否则自定义域名失效。
 - 站内 JS（`index.md` 末段）是 async 拉取 GitHub API，**有 60 次/小时（未鉴权）的限流**；如果访问量大的页面重复触发抓取，可能触发限流——但本仓库目前只有首页一次调用，无影响。
-- ECharts 通过 CDN 加载，离线 / 内网环境下图表会失败；目前接受这个 trade-off。
+- ECharts 通过 CDN 加载，**只在雷达图进入视口后才动态注入**（IntersectionObserver gate）。离线 / 内网环境下图表会失败；目前接受这个 trade-off。
+- **图片格式约定**：每个 PNG 资源默认配套一个 `.webp`（CI 自动重新生成；本地预览前可用 `cwebp` 手动跑一次）。新增 PNG 时同步加 WebP，否则首屏图片体积不优。
+- **新增页面时**：除建 `xxx.md` 外，还要在 `partials/head-xxx.html` 放一份 head 片段（含 page-specific OG title / description），CI 会自动 `--include-in-header=partials/head-xxx.html` 注入。
 - 修改后**不要忘记在 `preview.html` 重新生成新快照并 commit**，否则 CI/外部预览可能用过时版本。
 
 ## 常用命令速查

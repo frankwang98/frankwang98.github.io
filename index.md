@@ -18,7 +18,10 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 </nav>
 
 <section id="hero" class="hero">
-  <img class="avatar" src="assets/frankwang98.png" alt="Frank Wang" width="96" height="96">
+  <picture>
+    <source srcset="assets/frankwang98-192.webp 2x, assets/frankwang98.webp 1x" type="image/webp">
+    <img class="avatar" src="assets/frankwang98.png" alt="Frank Wang" width="96" height="96">
+  </picture>
   <h1 class="name">Frank Wang</h1>
   <p class="role">Robotics Engineer · AI Explorer · Tech Creator</p>
   <p class="tagline">探索机器人、AI 与未来科技。<br>分享技术实践、工程经验、效率工具与个人成长。</p>
@@ -346,7 +349,7 @@ img { max-width: 100%; }
 .nav-links {
   list-style: none;
   display: flex; gap: 1.1rem;
-  margin: 0 auto 0 0;
+  margin: 0 auto;
   padding: 0;
 }
 .nav-links a {
@@ -703,7 +706,16 @@ h4 { font-size: .98rem; font-weight: 600; }
 
 /* Show hamburger button only on mobile */
 .topnav .menu-btn { display: none; }
-/* Insert menu-btn via ::before — simpler: render the button in markup. But pandoc may filter; we inject via JS. */
+
+/* Respect users who request reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 </style>
 
 <noscript>
@@ -712,7 +724,7 @@ h4 { font-size: .98rem; font-weight: 600; }
   </style>
 </noscript>
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<!-- ECharts is dynamically loaded by the radar IIFE below (IntersectionObserver-gated). -->
 <script>
 // =============================================================
 // Theme switch (system / light / dark) with localStorage
@@ -872,13 +884,25 @@ function renderRadar(){
 function renderRadarGaps(){} // no-op for home (gaps are inferred from data shape)
 
 (function(){
-  if (typeof echarts === 'undefined') return;
   var el = document.getElementById('radar');
   if (!el) return;
+  var ECHARTS_URL = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
+  var loading = false;
+  function ensureECharts(cb){
+  if (typeof echarts !== 'undefined') return cb();
+  if (loading) return; // already in flight
+  loading = true;
+  var s = document.createElement('script');
+  s.src = ECHARTS_URL;
+  s.async = true;
+  s.onload = function(){ cb(); };
+  s.onerror = function(){ loading = false; }; // allow retry on next viewport hit
+  document.head.appendChild(s);
+  }
   var observer = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
   if (e.isIntersecting) {
-  renderRadar();
+  ensureECharts(function(){ renderRadar(); });
   observer.disconnect();
   }
   });

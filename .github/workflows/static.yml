@@ -28,8 +28,29 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Install Pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
+      - name: Install Pandoc + WebP tools
+        run: sudo apt-get update && sudo apt-get install -y pandoc webp
+
+      - name: Optimize images (regenerate WebP from PNG)
+        run: |
+          # Lossless WebP for QR-style / line art; quality WebP for photos.
+          # Idempotent: always re-encodes from PNG (cheap, ensures freshness).
+          shopt -s nullglob
+          for png in assets/*.png; do
+            base="${png%.png}"
+            # Skip the small CSDN icon (already tiny).
+            case "$(basename "$png")" in
+              csdn.png) continue ;;
+            esac
+            # Heuristic: alipay/wechat are QR codes → lossless.
+            case "$(basename "$png")" in
+              alipay.png|wechat.png)
+                cwebp -lossless -m 6 "$png" -o "${base}.webp" ;;
+              *)
+                cwebp -q 82 -m 6 "$png" -o "${base}.webp" ;;
+            esac
+          done
+          ls -la assets/
 
       - name: Convert Markdown to HTML
         run: |
@@ -38,8 +59,12 @@ jobs:
             [ "$f" = "README.md" ] && continue
             [ "$f" = "CLAUDE.md" ] && continue
             out="${f%.md}.html"
+            name="${f%.md}"
+            # --css=data:... suppresses pandoc's built-in typography CSS so the
+            # inline <style> blocks in each .md are the only source of truth.
             pandoc --standalone \
-              --css=https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css \
+              --css="data:text/css;base64," \
+              --include-in-header="partials/head-${name}.html" \
               -f markdown \
               -t html5 \
               "$f" \

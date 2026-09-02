@@ -170,9 +170,19 @@ tr:hover td { background: var(--card-bg); }
 @media (max-width: 640px) {
   .chart-box { height: 380px; }
 }
+
+/* Respect users who request reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<!-- ECharts is dynamically loaded by init() below (no sync <script src>). -->
 <script>
 // =============================================================
 //  👉 编辑这里：每个维度 0-5 分，保存后刷新即生效
@@ -302,19 +312,27 @@ function renderGaps() {
 }
 
 function init() {
-  if (typeof echarts === 'undefined') {
-    document.getElementById('chart').innerHTML =
-      '<p style="text-align:center;color:#888;padding:2rem;">ECharts CDN 加载失败，请检查网络后刷新</p>';
-    return;
+  const ECHARTS_URL = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
+  function ensureECharts(cb) {
+    if (typeof echarts !== 'undefined') return cb();
+    var s = document.createElement('script');
+    s.src = ECHARTS_URL;
+    s.async = true;
+    s.onload = cb;
+    s.onerror = function() {
+      document.getElementById('chart').innerHTML =
+        '<p style="text-align:center;color:#888;padding:2rem;">ECharts CDN 加载失败，请检查网络后刷新</p>';
+    };
+    document.head.appendChild(s);
   }
-  renderRadar();
-  renderGaps();
-  window.addEventListener('resize', () => chart && chart.resize());
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      renderRadar();
-    });
-  }
+  ensureECharts(function() {
+    renderRadar();
+    renderGaps();
+    window.addEventListener('resize', () => chart && chart.resize());
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', renderRadar);
+    }
+  });
 }
 
 if (document.readyState === 'loading') {

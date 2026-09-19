@@ -156,6 +156,15 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <p>规划控制、工程架构、感知与端到端总览。</p>
   <span class="ext">↗ 阅读知识库 →</span>
   </a>
+  <a class="card link-card" href="awesome_hub/#/docs/embodied-ai/">
+  <div class="big-emoji" aria-hidden="true">🧠</div>
+  <h4>具身智能知识库</h4>
+  <ul class="tags">
+  <li>VLA</li><li>World Models</li><li>Robot Learning</li><li>Sim2Real</li>
+  </ul>
+  <p>让 AI 感知、理解、决策并作用于真实的物理世界。</p>
+  <span class="ext">↗ 阅读知识库 →</span>
+  </a>
   </div>
 </section>
 

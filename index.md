@@ -126,41 +126,36 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 <section id="knowledge" class="knowledge">
   <p class="eyebrow">KNOWLEDGE · TECH NOTES</p>
   <h2>知识体系</h2>
-  <p class="section-sub">技术笔记将按以下 4 类组织。内容正在建设中——我会在 GitHub repo 中逐步沉淀实战笔记、踩坑记录与教科书片段。</p>
+  <p class="section-sub">持续沉淀工程实践、学习笔记与速查内容；所有知识库集中在 Awesome Hub。</p>
 
   <div class="grid knowledge">
-  <article class="card">
+  <a class="card link-card" href="awesome_hub/#/docs/cpp/">
+  <div class="big-emoji" aria-hidden="true">💻</div>
+  <h4>C++ 知识库</h4>
+  <ul class="tags">
+  <li>基础语法</li><li>STL</li><li>现代 C++</li><li>并发</li>
+  </ul>
+  <p>从语言基础到工程工具链的系统速查。</p>
+  <span class="ext">↗ 阅读知识库 →</span>
+  </a>
+  <a class="card link-card" href="awesome_hub/#/docs/ros2/">
   <div class="big-emoji" aria-hidden="true">🤖</div>
-  <h4>Robotics</h4>
+  <h4>ROS / ROS2 知识库</h4>
   <ul class="tags">
   <li>ROS2</li><li>Navigation</li><li>Sensor Fusion</li>
   </ul>
-  <p class="placeholder">构建中 · slam / nav2 / rviz 实战</p>
-  </article>
-  <article class="card">
-  <div class="big-emoji" aria-hidden="true">💻</div>
-  <h4>Programming</h4>
+  <p>核心概念、工作空间、TF、URDF 与 Launch。</p>
+  <span class="ext">↗ 阅读知识库 →</span>
+  </a>
+  <a class="card link-card" href="awesome_hub/#/docs/autonomous-driving/">
+  <div class="big-emoji" aria-hidden="true">🚗</div>
+  <h4>自动驾驶知识库</h4>
   <ul class="tags">
-  <li>C++ Modern</li><li>Linux</li><li>Software Engineering</li>
+  <li>规划</li><li>控制</li><li>工程实践</li><li>端到端</li>
   </ul>
-  <p class="placeholder">构建中 · C++ 工程实践 / Linux 内核碎片</p>
-  </article>
-  <article class="card">
-  <div class="big-emoji" aria-hidden="true">🧠</div>
-  <h4>AI</h4>
-  <ul class="tags">
-  <li>AI Tools</li><li>LLM</li><li>AI Workflow</li>
-  </ul>
-  <p class="placeholder">构建中 · 模型选型 / Agent 编排 / 评测</p>
-  </article>
-  <article class="card">
-  <div class="big-emoji" aria-hidden="true">🌍</div>
-  <h4>Trends</h4>
-  <ul class="tags">
-  <li>AI Industry</li><li>Future Technology</li>
-  </ul>
-  <p class="placeholder">构建中 · 行业观察 / 趋势记录</p>
-  </article>
+  <p>规划控制、工程架构、感知与端到端总览。</p>
+  <span class="ext">↗ 阅读知识库 →</span>
+  </a>
   </div>
 </section>
 

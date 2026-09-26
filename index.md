@@ -9,7 +9,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <li><a href="#about" data-nav>About</a></li>
   <li><a href="#projects" data-nav>Projects</a></li>
   <li><a href="#knowledge" data-nav>Knowledge</a></li>
-  <li><a href="#content" data-nav>Content</a></li>
+  <li><a href="#articles" data-nav>Articles</a></li>
   <li><a href="#journey" data-nav>Journey</a></li>
   </ul>
   <button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题">
@@ -27,8 +27,9 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <p class="tagline">探索机器人、AI 与未来科技。<br>分享技术实践、工程经验、效率工具与个人成长。</p>
   <div class="cta-row">
   <a class="btn primary" href="#projects">🚀 Projects</a>
-  <a class="btn ghost" href="#content">📝 Content</a>
   <a class="btn ghost" href="#knowledge">🌎 Knowledge</a>
+  <a class="btn ghost" href="#articles">📝 Articles</a>
+  <a class="btn ghost" href="#journey">🧭 Journey</a>
   </div>
 </section>
 
@@ -48,18 +49,17 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   </div>
   <div class="about-chart">
   <p class="eyebrow">CAPABILITY · RADAR</p>
-  <p class="chart-caption">当前能力 ↔ P7 资深参考 · 点击展开深度版 ↓</p>
+  <p class="chart-caption">当前能力与成长方向</p>
   <div id="radar" class="radar"></div>
-  <a class="chart-link" href="skillmap.html">📊 完整能力图谱（P6 / P7 对照）→</a>
   </div>
 </section>
 
 <section id="projects" class="projects">
   <p class="eyebrow">PROJECTS</p>
   <h2>做过的开源项目 & 产品</h2>
-  <p class="section-sub">精选的 6 个项目，分两类：CLI 工具集、Web / 小程序应用。</p>
+  <p class="section-sub">当前以工具和应用为主，机器人与 AI 项目逐步补充。</p>
 
-  <h3 class="group-label">Open Source Tools</h3>
+  <h3 class="group-label">Tools &amp; Experiments</h3>
   <div class="grid">
   <article class="card">
   <div class="card-head">
@@ -168,10 +168,10 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   </div>
 </section>
 
-<section id="content" class="content">
-  <p class="eyebrow">CONTENT</p>
-  <h2>我输出的地方</h2>
-  <p class="section-sub">分散在 4 个平台，按内容深度 / 形式分工。</p>
+<section id="articles" class="content">
+  <p class="eyebrow">ARTICLES · CONTENT</p>
+  <h2>文章与内容</h2>
+  <p class="section-sub">技术文章 · 工程实践 · 视频 · 科技内容。</p>
 
   <div class="grid content">
   <a class="card link-card" href="https://www.xiaohongshu.com/user/profile/5c6f6640000000001200d262?xsec_token=ABNvoM7f1Hcfl-OIJ5oXlD5oYBca1Bq_C2H9626h9B0Vo%3D&amp;xsec_source=pc_search" rel="noopener">
@@ -265,7 +265,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   --accent-2: #818cf8;
   --accent-soft: rgba(99,102,241,0.08);
   --radius: 10px;
-  --maxw: 760px;
+  --maxw: 1040px;
   --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
@@ -530,7 +530,7 @@ h4 { font-size: .98rem; font-weight: 600; }
   color: var(--accent);
 }
 
-/* ---------- Projects / Knowledge / Content grid ---------- */
+/* ---------- Projects / Knowledge / Articles grid ---------- */
 .group-label {
   font-size: 12px;
   text-transform: uppercase;
@@ -542,8 +542,13 @@ h4 { font-size: .98rem; font-weight: 600; }
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.knowledge .grid,
+.content .grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .card {
@@ -682,6 +687,12 @@ h4 { font-size: .98rem; font-weight: 600; }
 
 /* ---------- Responsive nav (mobile hamburger) ---------- */
 @media (max-width: 640px) {
+  .grid,
+  .knowledge .grid,
+  .content .grid {
+  grid-template-columns: 1fr;
+  }
+
   .topnav { gap: .65rem; padding: 0 .8rem; }
   .brand-name { display: none; }
   .nav-links {
@@ -705,6 +716,14 @@ h4 { font-size: .98rem; font-weight: 600; }
   border: 1px solid var(--border);
   color: var(--text);
   cursor: pointer;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 860px) {
+  .grid,
+  .knowledge .grid,
+  .content .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -811,7 +830,7 @@ h4 { font-size: .98rem; font-weight: 600; }
 })();
 
 // =============================================================
-// ECharts radar — current + P7 reference (P6 dropped for noise reduction)
+// ECharts radar — current capability + growth direction
 // Lazy init on intersection
 // =============================================================
 const SKILL_SCORES = {
@@ -823,7 +842,7 @@ const SKILL_SCORES = {
   '工程化与架构': 3,
   '影响力与产品思维': 2,
 };
-const P7_SCORES = {
+const TARGET_SCORES = {
   'C++ 系统编程': 4.5,
   'Python / 数据 / ML': 4.5,
   '机器人 / 自动驾驶 领域': 4.7,
@@ -875,8 +894,8 @@ function renderRadar(){
   itemStyle: { color: '#6366F1' }
   },
   {
-  name: 'P7 资深',
-  value: CATEGORIES.map(function(c){ return P7_SCORES[c]; }),
+  name: '成长方向',
+  value: CATEGORIES.map(function(c){ return TARGET_SCORES[c]; }),
   areaStyle: { opacity: 0.06, color: '#a5b4fc' },
   lineStyle: { color: '#a5b4fc', width: 1.5, type: 'dashed' },
   itemStyle: { color: '#a5b4fc' }

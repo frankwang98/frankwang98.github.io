@@ -60,11 +60,17 @@ jobs:
             [ "$f" = "CLAUDE.md" ] && continue
             out="${f%.md}.html"
             name="${f%.md}"
+            case "$name" in
+              404) pagetitle="404 — Frank Wang" ;;
+              *) pagetitle="Frank Wang — Robotics Engineer · AI Explorer · Tech Creator" ;;
+            esac
             # --css=data:... suppresses pandoc's built-in typography CSS so the
             # inline <style> blocks in each .md are the only source of truth.
             pandoc --standalone \
               --css="data:text/css;base64," \
               --include-in-header="partials/head-${name}.html" \
+              --metadata=title: \
+              --metadata="pagetitle=${pagetitle}" \
               -f markdown \
               -t html5 \
               "$f" \

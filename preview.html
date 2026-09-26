@@ -255,7 +255,7 @@ KNOWLEDGE · TECH NOTES
 知识体系
 </h2>
 <p class="section-sub">
-持续沉淀工程实践、学习笔记与速查内容；所有知识库集中在 Awesome Hub。
+技术知识沉淀于 Awesome Hub；通识教育与终身学习沉淀于 Education Hub。
 </p>
 <div class="grid knowledge">
 <a class="card link-card" href="awesome_hub/#/docs/cpp/">
@@ -356,6 +356,43 @@ Sim2Real
 </p>
 <span class="ext">↗ 阅读知识库 →</span> </a>
 </div>
+<p class="group-label">
+GENERAL EDUCATION · LIFELONG LEARNING
+</p>
+<a class="card link-card education-hub-card" href="education_hub/#/">
+<div class="big-emoji" aria-hidden="true">
+📚
+</div>
+<div class="hub-card-copy">
+<h4>
+Education Hub · 通识教育知识库
+</h4>
+<ul class="tags">
+<li>
+语文
+</li>
+<li>
+数学
+</li>
+<li>
+英语
+</li>
+<li>
+科学
+</li>
+<li>
+人文
+</li>
+<li>
+学习方法
+</li>
+</ul>
+<p>
+从基础知识到理解世界：用结构化讲解、练习与解析，支持长期、自主地重新学习。
+</p>
+<span class="ext">↗ 进入 Education Hub →</span>
+</div>
+</a>
 </section>
 <section id="articles" class="content">
 <p class="eyebrow">
@@ -858,6 +895,14 @@ h4 { font-size: .98rem; font-weight: 600; }
 
 .link-card { color: var(--text); }
 .link-card:hover { color: var(--text); border-color: var(--accent); }
+.education-hub-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+.education-hub-card .big-emoji { margin-top: .1rem; }
+.hub-card-copy { display: flex; flex-direction: column; gap: .55rem; }
 .muted-card { opacity: .85; }
 
 .big-emoji { font-size: 28px; line-height: 1; }

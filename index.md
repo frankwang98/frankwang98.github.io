@@ -191,18 +191,18 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <div class="big-emoji" aria-hidden="true">🌸</div>
   <h4>小红书</h4>
   <p>科技趋势 · AI 工具 · 排行榜内容</p>
-  <span class="ext">↗ @ 弗兰克王 →</span>
+  <span class="ext">↗ 工位勇敢的笋壳鱼 →</span>
   </a>
   <article class="card muted-card">
   <div class="big-emoji" aria-hidden="true">📮</div>
   <h4>公众号</h4>
-  <p>深度技术文章（建设中）</p>
-  <span class="ext muted">即将上线</span>
+  <p>技术文章 · 读书笔记 · 日常记录</p>
+  <span class="ext muted">↗ DevFrank</span>
   </article>
   <a class="card link-card" href="https://devfrank.blog.csdn.net/" rel="noopener">
   <div class="big-emoji" aria-hidden="true">💻</div>
   <h4>CSDN</h4>
-  <p>工程实践笔记 · 长文记录</p>
+  <p>工程实践笔记 · Bug记录</p>
   <span class="ext">↗ devfrank.blog.csdn.net →</span>
   </a>
   <a class="card link-card" href="https://space.bilibili.com/286686575" rel="noopener">

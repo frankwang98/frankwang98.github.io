@@ -5,6 +5,8 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
 
 permissions:
   contents: read
@@ -24,6 +26,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Checkout ROS2Drive Cloud frontend
+        uses: actions/checkout@v4
+        with:
+          repository: frankwang98/ROS2Drive-Cloud
+          ref: main
+          path: _cloud-source
+
+      - name: Assemble cloud dashboard
+        run: |
+          mkdir -p ROS2Drive-Cloud
+          cp -a _cloud-source/site/. ROS2Drive-Cloud/
+          rm -rf _cloud-source
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

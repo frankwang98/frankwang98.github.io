@@ -57,29 +57,62 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 <section id="projects" class="projects">
   <p class="eyebrow">PROJECTS</p>
   <h2>做过的开源项目 & 产品</h2>
-  <p class="section-sub">当前以工具和应用为主，机器人与 AI 项目逐步补充。</p>
+  <p class="section-sub">当前重点建设机器人与自动驾驶系统，同时保留工程工具和应用实践。</p>
 
-  <h3 class="group-label">Tools &amp; Experiments</h3>
+  <h3 class="group-label">Robotics · 当前建设</h3>
+  <div class="grid">
+  <article class="card">
+  <div class="card-head"><h4>ROS2Drive</h4></div>
+  <p>建设中 · 面向低速无人车辆的 ROS2 / C++ 运行时参考实现，围绕任务、规划、控制与安全组织系统。</p>
+  <div class="tech"><span>C++</span><span>ROS2</span><span>Autonomy</span></div>
+  <a class="ext" href="https://github.com/frankwang98/ROS2Drive" rel="noopener">↗ GitHub</a>
+  <a class="ext" href="https://github.com/frankwang98/ROS2Drive/blob/main/docs/architecture.md" rel="noopener">↗ 架构文档</a>
+  </article>
+  <article class="card">
+  <div class="card-head"><h4>ROS2Drive-Cloud</h4></div>
+  <p>规划中 · 车云协同配套仓库，当前尚未提供实现。</p>
+  <div class="tech"><span>Cloud</span><span>Planned</span></div>
+  <a class="ext" href="https://github.com/frankwang98/ROS2Drive-Cloud" rel="noopener">↗ GitHub</a>
+  </article>
+  </div>
+
+  <h3 class="group-label">Engineering Tools · 工程实践</h3>
+  <div class="grid">
+  <article class="card">
+  <div class="card-head"><h4>CloudViewer</h4></div>
+  <p>C++ / Qt / PCL 点云可视化桌面软件。</p>
+  <div class="tech"><span>C++</span><span>Qt</span><span>PCL</span></div>
+  <a class="ext" href="https://github.com/frankwang98/CloudViewer" rel="noopener">↗ GitHub</a>
+  </article>
+  <article class="card">
+  <div class="card-head"><h4>UsefulToolbox</h4></div>
+  <p>柠檬百宝盒 PC 端工具集合。</p>
+  <div class="tech"><span>Desktop</span><span>Tools</span></div>
+  <a class="ext" href="https://github.com/frankwang98/UsefulToolbox" rel="noopener">↗ GitHub</a>
+  </article>
+  </div>
+
+  <h3 class="group-label">Archived Tools · 历史工具（仓库已归档）</h3>
   <div class="grid">
   <article class="card">
   <div class="card-head">
   <h4>ip-CLI</h4>
-  <span class="stars" data-repo="frankwang98/ipdisp" title="GitHub stars">★ …</span>
+  <span class="stars" data-repo="frankwang98/ipdisp_cli" title="GitHub stars">★ …</span>
   </div>
   <p>IP / 网络工具命令行，pip 包 <code>ipdisp</code>。</p>
   <div class="tech"><span>Python</span><span>CLI</span><span>PyPI</span></div>
   <a class="ext" href="https://pypi.org/project/ipdisp/" rel="noopener">↗ PyPI</a>
-  <a class="ext" href="https://github.com/frankwang98/ipdisp" rel="noopener">↗ GitHub</a>
+  <a class="ext" href="https://github.com/frankwang98/ipdisp_cli" rel="noopener">↗ GitHub</a>
   </article>
   <article class="card">
   <div class="card-head">
   <h4>gitkpi</h4>
-  <span class="stars" data-repo="frankwang98/gitkpi" title="GitHub stars">★ …</span>
+  <span class="stars" data-repo="frankwang98/gitkpi_cli" title="GitHub stars">★ …</span>
   </div>
   <p>Git 工作流指标 CLI，pip 包 <code>gitkpi</code>。</p>
   <div class="tech"><span>Python</span><span>CLI</span><span>Git</span></div>
   <a class="ext" href="https://pypi.org/project/gitkpi/" rel="noopener">↗ PyPI</a>
-  <a class="ext" href="https://github.com/frankwang98/gitkpi" rel="noopener">↗ GitHub</a>
+  <a class="ext" href="https://github.com/frankwang98/gitkpi_cli" rel="noopener">↗ GitHub</a>
   </article>
   <article class="card">
   <div class="card-head">
@@ -93,7 +126,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   </article>
   </div>
 
-  <h3 class="group-label">Applications</h3>
+  <h3 class="group-label">Applications · 应用作品</h3>
   <div class="grid">
   <article class="card">
   <div class="card-head">
@@ -114,7 +147,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <article class="card">
   <div class="card-head">
   <h4>tools · 在线工具集</h4>
-  <span class="stars" data-repo="frankwang98/tools-two-delta" title="GitHub stars">★ …</span>
+  <span class="stars" data-repo="frankwang98/tools" title="GitHub stars">★ …</span>
   </div>
   <p>Web 端开发者在线工具集合（部署在 Vercel）。</p>
   <div class="tech"><span>Web</span><span>Vercel</span></div>
@@ -126,7 +159,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 <section id="knowledge" class="knowledge">
   <p class="eyebrow">KNOWLEDGE · TECH NOTES</p>
   <h2>知识体系</h2>
-  <p class="section-sub">技术知识沉淀于 Awesome Hub；通识教育与终身学习沉淀于 Education Hub。</p>
+  <p class="section-sub">项目仓库维护实现与架构文档；Awesome Hub 沉淀可复用的技术知识；Education Hub 整理通识教育与终身学习内容。</p>
 
   <div class="grid knowledge">
   <a class="card link-card" href="awesome_hub/#/docs/cpp/">
@@ -184,7 +217,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 <section id="articles" class="content">
   <p class="eyebrow">ARTICLES · CONTENT</p>
   <h2>文章与内容</h2>
-  <p class="section-sub">技术文章 · 工程实践 · 视频 · 科技内容。</p>
+  <p class="section-sub">通过文章与视频分享实践过程；可复用的知识持续整理到知识库，具体实现与接口文档留在项目仓库。</p>
 
   <div class="grid content">
   <a class="card link-card" href="https://www.xiaohongshu.com/user/profile/5c6f6640000000001200d262?xsec_token=ABNvoM7f1Hcfl-OIJ5oXlD5oYBca1Bq_C2H9626h9B0Vo%3D&amp;xsec_source=pc_search" rel="noopener">

@@ -11,6 +11,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <li><a href="#knowledge" data-nav>Knowledge</a></li>
   <li><a href="#articles" data-nav>Articles</a></li>
   <li><a href="#journey" data-nav>Journey</a></li>
+  <li><a href="https://frankwang98.asia/webnav/" rel="noopener">网址导航 ↗</a></li>
   </ul>
   <button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题">
   <span class="ico-system">◐</span><span class="ico-light">☀</span><span class="ico-dark">☾</span>
@@ -292,6 +293,7 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <p class="ft-lead">Built with passion for technology.</p>
   <p class="ft-line">© 2026 Frank Wang &nbsp;·&nbsp; AI · Robotics · Open Source</p>
   <ul class="ft-links">
+  <li><a href="https://frankwang98.asia/webnav/" rel="noopener">WebAtlas · 网址导航 ↗</a></li>
   <li><a href="https://github.com/frankwang98" rel="noopener">GitHub</a></li>
   <li><a href="https://devfrank.blog.csdn.net/" rel="noopener">CSDN</a></li>
   <li><a href="https://space.bilibili.com/286686575" rel="noopener">Bilibili</a></li>

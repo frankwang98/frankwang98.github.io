@@ -71,13 +71,14 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   </article>
   <article class="card">
   <div class="card-head"><h4>ROS2Drive-Cloud</h4></div>
-  <p>规划中 · 车云协同配套仓库，当前尚未提供实现。</p>
-  <div class="tech"><span>Cloud</span><span>Planned</span></div>
+  <p>ROS2Drive 的车云协同配套项目，已具备任务控制台、边缘网关和只读车队监控页面。</p>
+  <div class="tech"><span>FastAPI</span><span>MQTT</span><span>Web</span></div>
+  <a class="ext" href="https://frankwang98.asia/ROS2Drive-Cloud/" rel="noopener">↗ 打开控制台</a>
   <a class="ext" href="https://github.com/frankwang98/ROS2Drive-Cloud" rel="noopener">↗ GitHub</a>
   </article>
   </div>
 
-  <h3 class="group-label">Engineering Tools · 工程实践</h3>
+  <h3 class="group-label">Engineering & Knowledge · 工程与知识项目</h3>
   <div class="grid">
   <article class="card">
   <div class="card-head"><h4>CloudViewer</h4></div>
@@ -86,10 +87,11 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
   <a class="ext" href="https://github.com/frankwang98/CloudViewer" rel="noopener">↗ GitHub</a>
   </article>
   <article class="card">
-  <div class="card-head"><h4>UsefulToolbox</h4></div>
-  <p>柠檬百宝盒 PC 端工具集合。</p>
-  <div class="tech"><span>Desktop</span><span>Tools</span></div>
-  <a class="ext" href="https://github.com/frankwang98/UsefulToolbox" rel="noopener">↗ GitHub</a>
+  <div class="card-head"><h4>ModernLife101</h4></div>
+  <p>用 2 至 3 分钟读懂一个现代生活问题，再沿链接继续探索真实世界。</p>
+  <div class="tech"><span>Knowledge</span><span>Explore</span><span>Web</span></div>
+  <a class="ext" href="https://frankwang98.asia/ModernLife101/" rel="noopener">↗ 打开网站</a>
+  <a class="ext" href="https://github.com/frankwang98/ModernLife101" rel="noopener">↗ GitHub</a>
   </article>
   </div>
 

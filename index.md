@@ -164,20 +164,20 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 <h2>知识体系</h2>
 <p class="section-sub">两个持续维护的知识库：一个专注技术与工程实践，一个面向通识教育与终身学习。</p>
 <div class="grid knowledge">
-<a class="card link-card" href="awesome_hub/#/">
+<article class="card knowledge-card">
 <div class="big-emoji" aria-hidden="true">💻</div>
 <h4>Awesome Hub · 技术知识库</h4>
 <ul class="tags"><li>C++</li><li>ROS / ROS2</li><li>自动驾驶</li><li>具身智能</li><li>工程实践</li></ul>
 <p>从编程基础、机器人系统到规划控制与 AI，沉淀可复用的技术知识、工程经验和学习路线。</p>
-<span class="ext">↗ 进入 Awesome Hub →</span>
-</a>
-<a class="card link-card" href="education_hub/#/">
+<a class="ext" href="awesome_hub/#/">↗ 进入 Awesome Hub →</a>
+</article>
+<article class="card knowledge-card">
 <div class="big-emoji" aria-hidden="true">📚</div>
 <h4>Education Hub · 通识教育知识库</h4>
 <ul class="tags"><li>语文与英语</li><li>数学</li><li>自然科学</li><li>人文社科</li><li>学习方法</li></ul>
 <p>覆盖基础学科、历史哲学、传统文化与生活通识，通过知识地图、讲解和练习支持自主学习。</p>
-<span class="ext">↗ 进入 Education Hub →</span>
-</a>
+<a class="ext" href="education_hub/#/">↗ 进入 Education Hub →</a>
+</article>
 </div>
 </section>
 

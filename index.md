@@ -160,61 +160,30 @@ description: Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 �
 </section>
 
 <section id="knowledge" class="knowledge">
-  <p class="eyebrow">KNOWLEDGE · TECH NOTES</p>
+  <p class="eyebrow">KNOWLEDGE · LEARNING HUBS</p>
   <h2>知识体系</h2>
-  <p class="section-sub">项目仓库维护实现与架构文档；Awesome Hub 沉淀可复用的技术知识；Education Hub 整理通识教育与终身学习内容。</p>
+  <p class="section-sub">两个持续维护的知识库：一个专注技术与工程实践，一个面向通识教育与终身学习。</p>
 
   <div class="grid knowledge">
-  <a class="card link-card" href="awesome_hub/#/docs/cpp/">
-  <div class="big-emoji" aria-hidden="true">💻</div>
-  <h4>C++ 知识库</h4>
-  <ul class="tags">
-  <li>基础语法</li><li>STL</li><li>现代 C++</li><li>并发</li>
-  </ul>
-  <p>从语言基础到工程工具链的系统速查。</p>
-  <span class="ext">↗ 阅读知识库 →</span>
-  </a>
-  <a class="card link-card" href="awesome_hub/#/docs/ros2/">
-  <div class="big-emoji" aria-hidden="true">🤖</div>
-  <h4>ROS / ROS2 知识库</h4>
-  <ul class="tags">
-  <li>ROS2</li><li>Navigation</li><li>Sensor Fusion</li>
-  </ul>
-  <p>核心概念、工作空间、TF、URDF 与 Launch。</p>
-  <span class="ext">↗ 阅读知识库 →</span>
-  </a>
-  <a class="card link-card" href="awesome_hub/#/docs/autonomous-driving/">
-  <div class="big-emoji" aria-hidden="true">🚗</div>
-  <h4>自动驾驶知识库</h4>
-  <ul class="tags">
-  <li>规划</li><li>控制</li><li>工程实践</li><li>端到端</li>
-  </ul>
-  <p>规划控制、工程架构、感知与端到端总览。</p>
-  <span class="ext">↗ 阅读知识库 →</span>
-  </a>
-  <a class="card link-card" href="awesome_hub/#/docs/embodied-ai/">
-  <div class="big-emoji" aria-hidden="true">🧠</div>
-  <h4>具身智能知识库</h4>
-  <ul class="tags">
-  <li>VLA</li><li>World Models</li><li>Robot Learning</li><li>Sim2Real</li>
-  </ul>
-  <p>让 AI 感知、理解、决策并作用于真实的物理世界。</p>
-  <span class="ext">↗ 阅读知识库 →</span>
-  </a>
+    <a class="card link-card" href="awesome_hub/#/">
+      <div class="big-emoji" aria-hidden="true">💻</div>
+      <h4>Awesome Hub · 技术知识库</h4>
+      <ul class="tags">
+        <li>C++</li><li>ROS / ROS2</li><li>自动驾驶</li><li>具身智能</li><li>工程实践</li>
+      </ul>
+      <p>从编程基础、机器人系统到规划控制与 AI，沉淀可复用的技术知识、工程经验和学习路线。</p>
+      <span class="ext">↗ 进入 Awesome Hub →</span>
+    </a>
+    <a class="card link-card" href="education_hub/#/">
+      <div class="big-emoji" aria-hidden="true">📚</div>
+      <h4>Education Hub · 通识教育知识库</h4>
+      <ul class="tags">
+        <li>语文与英语</li><li>数学</li><li>自然科学</li><li>人文社科</li><li>学习方法</li>
+      </ul>
+      <p>覆盖基础学科、历史哲学、传统文化与生活通识，通过知识地图、讲解和练习支持自主学习。</p>
+      <span class="ext">↗ 进入 Education Hub →</span>
+    </a>
   </div>
-
-  <p class="group-label">GENERAL EDUCATION · LIFELONG LEARNING</p>
-  <a class="card link-card education-hub-card" href="education_hub/#/">
-  <div class="big-emoji" aria-hidden="true">📚</div>
-  <div class="hub-card-copy">
-  <h4>Education Hub · 通识教育知识库</h4>
-  <ul class="tags">
-  <li>语文</li><li>数学</li><li>英语</li><li>科学</li><li>人文</li><li>学习方法</li>
-  </ul>
-  <p>从基础知识到理解世界：用结构化讲解、练习与解析，支持长期、自主地重新学习。</p>
-  <span class="ext">↗ 进入 Education Hub →</span>
-  </div>
-  </a>
 </section>
 
 <section id="articles" class="content">

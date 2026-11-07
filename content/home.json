@@ -1,0 +1,449 @@
+{
+  "title": "Frank Wang — Robotics Engineer · AI Explorer · Tech Creator",
+  "description": "Robotics · Autonomous Driving · C++ · AI · ROS2. 技术实践 · 工程经验 · 个人成长。",
+  "nav": {
+    "topnav": {
+      "href": "#hero",
+      "brand": {
+        "monogram": {
+          "text": "FW"
+        },
+        "brand_name": {
+          "text": "Frank Wang"
+        }
+      },
+      "nav_links": {
+        "li_items": [
+          {
+            "li": {
+              "href": "#about",
+              "a": {
+                "text": "About"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "#projects",
+              "a": {
+                "text": "Projects"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "#viewpoint",
+              "a": {
+                "text": "Viewpoint"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "/articles/",
+              "a": {
+                "text": "Articles"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "https://frankwang98.asia/webnav/",
+              "a": {
+                "text": "网址导航 ↗"
+              }
+            }
+          }
+        ],
+        "li": {
+          "href": "/awesome_hub/#/",
+          "a": {
+            "text": "知识库 ↗"
+          }
+        }
+      },
+      "theme_toggle": {
+        "ico_system": {
+          "text": "◐"
+        },
+        "ico_light": {
+          "text": "☀"
+        },
+        "ico_dark": {
+          "text": "☾"
+        }
+      }
+    }
+  },
+  "hero": {
+    "hero": {
+      "picture": {
+        "srcset": "assets/frankwang98-192.webp 2x, assets/frankwang98.webp 1x",
+        "src": "assets/frankwang98.png",
+        "alt": "Frank Wang"
+      },
+      "name": {
+        "text": "Frank Wang"
+      },
+      "role": {
+        "text": "Robotics Engineer · AI Explorer · Tech Creator"
+      },
+      "tagline": {
+        "text": "探索机器人、AI 与未来科技。",
+        "text_2": "分享技术实践、工程经验、效率工具与个人成长。"
+      }
+    }
+  },
+  "about": {
+    "about": {
+      "about_text": {
+        "eyebrow": {
+          "text": "ABOUT"
+        },
+        "h2": {
+          "text": "机器人方向软件工程师"
+        },
+        "p": {
+          "text": "我是",
+          "strong": {
+            "text": "Frank Wang"
+          },
+          "text_2": "，从 C++ 工程基础出发，逐步走进机器人与自动驾驶的世界。现在我更关心一件事——把",
+          "strong_2": {
+            "text": "AI 带进真实的物理系统"
+          },
+          "text_3": "。"
+        },
+        "p_2": {
+          "text": "希望用技术实践和内容分享，记录探索未来科技的过程。"
+        },
+        "chips": {
+          "chip_items": [
+            {
+              "chip": {
+                "text": "Robotics"
+              }
+            },
+            {
+              "chip": {
+                "text": "Autonomous Driving"
+              }
+            },
+            {
+              "chip": {
+                "text": "C++"
+              }
+            },
+            {
+              "chip": {
+                "text": "ROS2"
+              }
+            },
+            {
+              "chip": {
+                "text": "AI Technology"
+              }
+            }
+          ]
+        }
+      },
+      "about_chart": {
+        "eyebrow": {
+          "text": "CAPABILITY · RADAR"
+        },
+        "chart_caption": {
+          "text": "当前能力与成长方向"
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "开源项目 & 产品",
+    "description": "当前项目与历史作品。",
+    "groups": [
+      {
+        "title": "当前项目",
+        "cards": [
+          {
+            "name": "ROS2Drive-Cloud",
+            "description": "ROS2Drive 的车云协同配套项目，已具备任务控制台、边缘网关和只读车队监控页面。",
+            "tags": [
+              {
+                "label": "FastAPI"
+              },
+              {
+                "label": "MQTT"
+              },
+              {
+                "label": "Web"
+              }
+            ],
+            "links": [
+              {
+                "url": "https://frankwang98.asia/ROS2Drive-Cloud/",
+                "label": "↗ 打开控制台"
+              },
+              {
+                "url": "https://github.com/frankwang98/ROS2Drive-Cloud",
+                "label": "↗ GitHub"
+              }
+            ],
+            "notes": []
+          },
+          {
+            "name": "ROS2Drive",
+            "description": "建设中 · 面向低速无人车辆的 ROS2 / C++ 运行时参考实现，围绕任务、规划、控制与安全组织系统。",
+            "tags": [
+              {
+                "label": "C++"
+              },
+              {
+                "label": "ROS2"
+              },
+              {
+                "label": "Autonomy"
+              }
+            ],
+            "links": [
+              {
+                "url": "https://github.com/frankwang98/ROS2Drive",
+                "label": "↗ GitHub"
+              },
+              {
+                "url": "https://github.com/frankwang98/ROS2Drive/blob/main/docs/architecture.md",
+                "label": "↗ 架构文档"
+              }
+            ],
+            "notes": []
+          },
+          {
+            "name": "ModernLife101",
+            "description": "用 2 至 3 分钟读懂一个现代生活问题，再沿链接继续探索真实世界。",
+            "tags": [
+              {
+                "label": "Knowledge"
+              },
+              {
+                "label": "Explore"
+              },
+              {
+                "label": "Web"
+              }
+            ],
+            "links": [
+              {
+                "url": "https://frankwang98.asia/ModernLife101/",
+                "label": "↗ 打开网站"
+              },
+              {
+                "url": "https://github.com/frankwang98/ModernLife101",
+                "label": "↗ GitHub"
+              }
+            ],
+            "notes": []
+          }
+        ]
+      },
+      {
+        "title": "历史项目",
+        "cards": [
+          {
+            "name": "ip-CLI",
+            "description": "IP / 网络工具命令行，pip 包 ipdisp。",
+            "tags": [
+              {
+                "label": "Python"
+              },
+              {
+                "label": "CLI"
+              },
+              {
+                "label": "PyPI"
+              }
+            ],
+            "links": [
+              {
+                "url": "https://pypi.org/project/ipdisp/",
+                "label": "↗ PyPI"
+              },
+              {
+                "url": "https://github.com/frankwang98/ipdisp_cli",
+                "label": "↗ GitHub"
+              }
+            ],
+            "notes": []
+          },
+          {
+            "name": "柠檬百宝盒",
+            "description": "微信小程序，日常实用工具集合。",
+            "tags": [
+              {
+                "label": "WeChat Mini-App"
+              }
+            ],
+            "links": [],
+            "notes": [
+              {
+                "label": "↗ 微信搜索「柠檬百宝盒」"
+              }
+            ]
+          },
+          {
+            "name": "柠檬大消除",
+            "description": "休闲小游戏，水果消除玩法。",
+            "tags": [
+              {
+                "label": "WeChat Mini-App"
+              },
+              {
+                "label": "Game"
+              }
+            ],
+            "links": [],
+            "notes": [
+              {
+                "label": "↗ 微信搜索「柠檬大消除」"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "footer": {
+      "ft_lead": {
+        "text": "Built with passion for technology."
+      },
+      "ft_line": {
+        "text": "© 2026 Frank Wang  ·  AI · Robotics · Open Source"
+      },
+      "ft_links": {
+        "li_items": [
+          {
+            "li": {
+              "href": "https://frankwang98.asia/webnav/",
+              "a": {
+                "text": "WebAtlas · 网址导航 ↗"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "https://github.com/frankwang98",
+              "a": {
+                "text": "GitHub"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "https://devfrank.blog.csdn.net/",
+              "a": {
+                "text": "CSDN"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "https://space.bilibili.com/286686575",
+              "a": {
+                "text": "Bilibili"
+              }
+            }
+          },
+          {
+            "li": {
+              "href": "https://www.xiaohongshu.com/user/profile/5c6f6640000000001200d262?xsec_token=ABNvoM7f1Hcfl-OIJ5oXlD5oYBca1Bq_C2H9626h9B0Vo%3D&xsec_source=pc_search",
+              "a": {
+                "text": "小红书"
+              }
+            }
+          }
+        ]
+      },
+      "ft_tribute": {
+        "small": {
+          "text": "Tribute to",
+          "href": "https://www.bellard.org/",
+          "a": {
+            "text": "bellard.org"
+          }
+        }
+      }
+    }
+  },
+  "radar": {
+    "current": {
+      "C++ 系统编程": 3,
+      "Python / 数据 / ML": 4,
+      "机器人 / 自动驾驶 领域": 3,
+      "系统整合能力": 3,
+      "数学 / 算法 / 前沿": 4,
+      "工程化与架构": 3,
+      "影响力与产品思维": 2
+    },
+    "target": {
+      "C++ 系统编程": 4.5,
+      "Python / 数据 / ML": 4.5,
+      "机器人 / 自动驾驶 领域": 4.7,
+      "系统整合能力": 4.7,
+      "数学 / 算法 / 前沿": 4.5,
+      "工程化与架构": 4.6,
+      "影响力与产品思维": 4.5
+    }
+  },
+  "viewpoint": {
+    "title": "观点与分享",
+    "description": "通过文字、视频与日常记录，分享对技术和生活的观察。",
+    "platforms": [
+      {
+        "name": "小红书",
+        "description": "科技趋势 · AI 工具 · 排行榜内容",
+        "icon": "🌸",
+        "links": [
+          {
+            "url": "https://www.xiaohongshu.com/user/profile/5c6f6640000000001200d262?xsec_token=ABNvoM7f1Hcfl-OIJ5oXlD5oYBca1Bq_C2H9626h9B0Vo%3D&xsec_source=pc_search",
+            "label": "↗ 工位勇敢的笋壳鱼 →"
+          }
+        ],
+        "notes": []
+      },
+      {
+        "name": "公众号",
+        "description": "技术文章 · 读书笔记 · 日常记录",
+        "icon": "📮",
+        "links": [],
+        "notes": [
+          {
+            "label": "微信搜索「DevFrank」"
+          }
+        ]
+      },
+      {
+        "name": "CSDN",
+        "description": "工程实践笔记 · Bug记录",
+        "icon": "💻",
+        "links": [
+          {
+            "url": "https://devfrank.blog.csdn.net/",
+            "label": "↗ devfrank.blog.csdn.net →"
+          }
+        ],
+        "notes": []
+      },
+      {
+        "name": "Bilibili",
+        "description": "技术视频 · 演示与分享",
+        "icon": "📺",
+        "links": [
+          {
+            "url": "https://space.bilibili.com/286686575",
+            "label": "↗ space.bilibili.com →"
+          }
+        ],
+        "notes": []
+      }
+    ]
+  }
+}

@@ -1,88 +1,38 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
-
+name: Build and deploy personal site
 on:
   push:
-    branches: ["main"]
+    branches: [main]
+  pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+      - run: bash scripts/build.sh
+      - run: node --check assets/js/site.js && node --check assets/js/blog.js
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Install Pandoc + WebP tools
-        run: sudo apt-get update && sudo apt-get install -y pandoc webp
-
-      - name: Optimize images (regenerate WebP from PNG)
-        run: |
-          # Lossless WebP for QR-style / line art; quality WebP for photos.
-          # Idempotent: always re-encodes from PNG (cheap, ensures freshness).
-          shopt -s nullglob
-          for png in assets/*.png; do
-            base="${png%.png}"
-            # Skip the small CSDN icon (already tiny).
-            case "$(basename "$png")" in
-              csdn.png) continue ;;
-            esac
-            # Heuristic: alipay/wechat are QR codes → lossless.
-            case "$(basename "$png")" in
-              alipay.png|wechat.png)
-                cwebp -lossless -m 6 "$png" -o "${base}.webp" ;;
-              *)
-                cwebp -q 82 -m 6 "$png" -o "${base}.webp" ;;
-            esac
-          done
-          ls -la assets/
-
-      - name: Convert Markdown to HTML
-        run: |
-          # 仅处理作为页面的 .md 文件；README.md（仓库说明）/ CLAUDE.md（AI 协作说明）不发布为网页
-          for f in *.md; do
-            [ "$f" = "README.md" ] && continue
-            [ "$f" = "CLAUDE.md" ] && continue
-            out="${f%.md}.html"
-            name="${f%.md}"
-            case "$name" in
-              404) pagetitle="404 — Frank Wang" ;;
-              *) pagetitle="Frank Wang — Robotics Engineer · AI Explorer · Tech Creator" ;;
-            esac
-            # --css=data:... suppresses pandoc's built-in typography CSS so the
-            # inline <style> blocks in each .md are the only source of truth.
-            pandoc --standalone \
-              --css="data:text/css;base64," \
-              --include-in-header="partials/head-${name}.html" \
-              --metadata=title: \
-              --metadata="pagetitle=${pagetitle}" \
-              -f markdown \
-              -t html5 \
-              "$f" \
-              -o "$out"
-          done
-          ls -la *.html
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
+      - uses: actions/configure-pages@v5
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
